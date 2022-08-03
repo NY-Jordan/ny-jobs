@@ -24,82 +24,163 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="main-menu has-dropdown">
-                    <i class="ti-desktop"></i>
-                    <span>UI Elements</span>
+                <a href="index.html" class="link">
+                    <i class="ti-home"></i>
+                    <span>Settings</span>
                 </a>
-                <ul class="sub-menu ">
-                    <li><a href="element-ui.html" class="link"><span>Elements</span></a></li>
-                    <li><a href="element-accordion.html" class="link"><span>Accordion</span></a></li>
-                    <li><a href="element-tabs-collapse.html" class="link"><span>Tabs & Collapse</span></a></li>
-                    <li><a href="element-card.html" class="link"><span>Card</span></a></li>
-                    <li><a href="element-button.html" class="link"><span>Buttons</span></a></li>
-                    <li><a href="element-alert.html" class="link"><span>Alert</span></a></li>
-                    <li><a href="element-themify-icons.html" class="link"><span>Themify Icons</span></a></li>
-                    <li><a href="element-modal.html" class="link"><span>Modal</span></a></li>
-                </ul>
             </li>
             <li>
-                <a href="#" class="main-menu has-dropdown">
-                    <i class="ti-book"></i>
-                    <span>Form</span>
-                </a>
-                <ul class="sub-menu ">
-                    <li><a href="form-element.html" class="link">
-                            <span>Form Element</span></a>
-                    </li>
-                    <li><a href="form-datepicker.html" class="link">
-                            <span>Datepicker</span></a>
-                    </li>
-                    <li><a href="form-select2.html" class="link">
-                            <span>Select2</span></a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" class="main-menu has-dropdown">
-                    <i class="ti-notepad"></i>
-                    <span>Utilities</span>
-                </a>
-                <ul class="sub-menu">
-                    <li><a href="error-404.html" target="_blank" class="link"><span>Error 404</span></a></li>
-                    <li><a href="error-403.html" target="_blank" class="link"><span>Error 403</span></a></li>
-                    <li><a href="error-500.html" target="_blank" class="link"><span>Error 500</span></a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" class="main-menu has-dropdown">
-                    <i class="ti-layers-alt"></i>
+                <a href="index.html" class="link">
+                    <i class="ti-home"></i>
                     <span>Pages</span>
                 </a>
+            </li>
+            <li>
+                <a href="index.html" class="link">
+                    <i class="ti-home"></i>
+                    <span>News</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="main-menu has-dropdown">
+                    <i class="ti-desktop"></i>
+                    <span>Document and decision</span>
+                </a>
                 <ul class="sub-menu ">
-                    <li><a href="pages-blank.html" class="link"><span>Blank</span></a></li>
+                    <li><a href="element-ui.html" class="link"><span>Documents</span></a></li>
+                    <li><a href="element-accordion.html" class="link"><span>Decision</span></a></li>
                 </ul>
             </li>
             <li>
                 <a href="#" class="main-menu has-dropdown">
-                    <i class="ti-hummer"></i>
-                    <span>Auth</span>
+                    <i class="ti-desktop"></i>
+                    <span>Sectoral Inventory</span>
                 </a>
-                <ul class="sub-menu">
-                    <li><a href="auth-login.html" target="_blank" class="link"><span>Login</span></a></li>
-                    <li><a href="auth-register.html" target="_blank" class="link"><span>Register</span></a></li>
+                <ul class="sub-menu ">
+                    <li><a href="element-ui.html" class="link"><span>Afat</span></a></li>
+                    <li><a href="element-accordion.html" class="link"><span>Piup</span></a></li>
+                    <li><a href="element-ui.html" class="link"><span>Dechets</span></a></li>
+                    <li><a href="element-accordion.html" class="link"><span>Energie</span></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ti-desktop"></i>
+                    <span>Bilan Carbon</span>
+                </a>
+                <ul class="sub-menu ">
+                    <li><a href="element-accordion.html" class="link"><span>Bilan Carbon</span></a></li>
                 </ul>
             </li>
             <li>
                 <a href="#" class="main-menu has-dropdown">
-                    <i class="ti-write"></i>
-                    <span>Tables</span>
+                    <i class="ti-desktop"></i>
+                    <span>Bulletin</span>
                 </a>
                 <ul class="sub-menu ">
-                    <li><a href="table-basic.html" class="link"><span>Table Basic</span></a></li>
-                    <li><a href="table-datatables.html" class="link"><span>DataTables</span></a></li>
+                    <li><a href="element-accordion.html" class="link"><span>Dekadal</span></a></li>
+                    <li><a href="element-accordion.html" class="link"><span>Seasonal</span></a></li>
+                    <li><a href="element-accordion.html" class="link"><span>Monthly</span></a></li>
                 </ul>
             </li>
             <li>
-                <a href="charts.html" class="link">
-                    <i class="ti-bar-chart"></i>
-                    <span>Charts</span>
+                <a href="#" class="main-menu has-dropdown">
+                    <i class="ti-desktop"></i>
+                    <span>Bilan</span>
+                </a>
+                <ul class="sub-menu ">
+                    <li><a href="element-accordion.html" class="link"><span>Dekadal</span></a></li>
+                    <li><a href="element-accordion.html" class="link"><span>Seasonal</span></a></li>
+                    <li><a href="element-accordion.html" class="link"><span>Monthly</span></a></li>
+                    <li><a href="element-accordion.html" class="link"><span>Yearly</span></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ti-book"></i>
+                    <span>Career</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ti-book"></i>
+                    <span>Suscriber</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" >
+                    <i class="ti-book"></i>
+                    <span>Team Member</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ti-book"></i>
+                    <span>Slider</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ti-book"></i>
+                    <span>Testimonial</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ti-book"></i>
+                    <span>Photo Gallery</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ti-book"></i>
+                    <span>SMS alert</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="main-menu has-dropdown">
+                    <i class="ti-desktop"></i>
+                    <span>Research & Training</span>
+                </a>
+                <ul class="sub-menu ">
+                    <li><a href="element-accordion.html" class="link"><span>Category</span></a></li>
+                    <li><a href="element-accordion.html" class="link"><span>Add & Edit</span></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" >
+                    <i class="ti-book"></i>
+                    <span>Partners</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" >
+                    <i class="ti-book"></i>
+                    <span>Video</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" >
+                    <i class="ti-book"></i>
+                    <span>Missions</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ti-book"></i>
+                    <span>Why choose Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" >
+                    <i class="ti-book"></i>
+                    <span>FAQ</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ti-book"></i>
+                    <span>Social Media</span>
                 </a>
             </li>
         </ul>
