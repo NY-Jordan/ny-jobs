@@ -25,6 +25,7 @@
     <div class="row justify-content-sm-center h-100 align-items-center">
         <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-7 col-sm-8">
             <div class="card shadow-lg">
+                
                 <div class="card-body p-4">
                     <h1 class="fs-4 text-center fw-bold mb-4">Login</h1>
                     <form method="POST" aria-label="abdul" data-id="abdul" class="needs-validation" novalidate=""
@@ -50,7 +51,7 @@
                                 </a>
                             </div>
                             <div class="input-group input-group-join mb-3">
-                                <input type="password" class="form-control" placeholder="Your password" required>
+                                <input type="password" class="form-control" placeholder="Your password"  name="password" required>
                                 <span class="input-group-text rounded-end password cursor-pointer">&nbsp<i class="fa fa-eye"></i>&nbsp</span>
                                 <div class="invalid-feedback">
                                     Password required
