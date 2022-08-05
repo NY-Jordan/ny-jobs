@@ -10,7 +10,7 @@
         </a>
     </div>
     <div class="sidebar-header">
-        <div class="text">AR</div>
+        <div style="text-align:center; font-size:20px;">Onacc-Admin</div>
         <div class="close-sidebar action-toggle">
             <i class="ti-close"></i>
         </div>
@@ -18,13 +18,13 @@
     <div class="sidebar-content">
         <ul>
             <li class="active">
-                <a href="index.html" class="link">
+                <a href="{{ route('index') }}" class="link">
                     <i class="ti-home"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li>
-                <a href="index.html" class="link">
+                <a href="{{ route('settings') }}" class="link">
                     <i class="ti-home"></i>
                     <span>Settings</span>
                 </a>

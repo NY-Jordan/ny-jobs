@@ -2,17 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
+
 Route::middleware(['auth'])->group(function (){
+    Route::get('/', [AppController::class, 'index'])->name('index');
+    Route::get('/settings', [AppController::class, 'settings'])->name('settings');
+    Route::post('update-logo', [AppController::class, 'updateLogo'])->name('logo.update');
+    Route::get('/pages', [AppController::class, 'pages'])->name('pages');
+    Route::get('/news', [AppController::class, 'news'])->name('news');
+    Route::get('/documentation-decision', [AppController::class, 'index'])->name('doc_decision');
+    Route::get('/', [AppController::class, 'index'])->name('index');
     Route::get('/', [AppController::class, 'index'])->name('index');
 });
 

@@ -22,9 +22,9 @@
 
 <body>
 <section class="container h-100">
-    
     <div class="row justify-content-sm-center h-100 align-items-center">
         <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-7 col-sm-8">
+           
             @foreach ($errors->all() as $error)
         <div class="alert alert-info">{{ $error }}</div>
     @endforeach
