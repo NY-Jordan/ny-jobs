@@ -122,16 +122,7 @@
 
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h4>Color</h4>
-                                        </div>
-                                        <div>
-                                            <input type="text" name="" id="">
-                                        </div>
-                                    </div>
-                                </div>
+                               
 
                             </div>
 
@@ -246,12 +237,24 @@
                                             <h4>Call To Action Section</h4>
                                         </div>
                                         <div style="padding: 10px">
-                                            <form action="" method="post">
+                                            <form action="{{ route('logo.update') }}" method="post">
+                                                @csrf
+                                                <input type="hidden"  value="cta" name="cta">
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
-                                                        <label for="exampleFormControlTextarea1" class="form-label">Newsletter Text</label>
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">  {{ $settings->newsletter_text }}</textarea>
+                                                        <label for="exampleFormControlTextarea1" class="form-label">CTA Text</label>
+                                                        <textarea class="form-control" name="cta_text" id="exampleFormControlTextarea1" rows="3">  {{ $settings->cta_text }}</textarea>
                                                     </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">CTA Button Text</label>
+                                                        <input type="text" class="form-control" name="cta_button_text" value="{{ $settings->cta_button_text }}" id="exampleFormControlTextarea1">                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">CTA Button URL</label>
+                                                        <input type="text" class="form-control" value="{{ $settings->cta_button_url }}" name="cta_button_url" id="exampleFormControlTextarea1">                                                    </div>
                                                 </div>
                                                 <button type="submit" style="font-size: 20px; border-radius:5px;"
                                                 class="bn btn-primary">Update</button>                                       
@@ -265,10 +268,15 @@
                                             <h4>Call To Action Background Photo
                                             </h4>
                                         </div>
+                                        <div>
+                                            <img src="{{ Storage::url($settings->cta_background) }}" alt="" srcset="">
+                                        </div>
                                         <div style="padding: 10px">
-                                            <form action="" method="post">
-                                                <div class="col-md-6">
-                                                    <input type="file" name="" id="">
+                                            <form action="{{ route('logo.update')  }}" method="post">
+                                                @csrf
+                                                <input type="hidden"  value="cta_background_hidden" name="cta_background">
+                                                <div class="col-md-6" style="margin-bottom: 10px;">
+                                                    <input type="file" name="cta_background" id="">
                                                 </div>
                                                 <button type="submit" style="font-size: 20px; border-radius:5px;"
                                                 class="bn btn-primary">Update</button>                                       
@@ -285,15 +293,17 @@
                                             </h4>
                                         </div>
                                         <div style="padding: 10px">
-                                            <form action="" method="post">
+                                            <form action="{{ route('logo.update')  }}" method="post">
+                                                @csrf
+                                                <input type="hidden" value="email" name="email">
                                                 <div class="mb-3">
                                                     <label for="basicInput" class="form-label">Send Email From *</label>
-                                                    <input type="text" value="{{ $settings->send_email_from }}"
+                                                    <input type="text" name="send_email_from" value="{{ $settings->send_email_from }}"
                                                         class="form-control" id="basicInput">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="basicInput" class="form-label">Recieve Email To *</label>
-                                                    <input type="text" value="{{ $settings->receive_email_to }}"
+                                                    <input type="text" name="receive_email_to" value="{{ $settings->receive_email_to }}"
                                                         class="form-control" id="basicInput">
                                                 </div>
                                                 <button type="submit" style="font-size: 20px; border-radius:5px;"
@@ -531,11 +541,135 @@
                                 
                             </div>
                             <div class="tab-pane fade" id="sidebar" role="tabpanel" aria-labelledby="contact-tab">
-                                Lorem ipsum dolor sit amet.</div>
-
-
-
-
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4>News Page - Sidebar Section</h4>
+                                        </div>
+                                        <div style="padding: 10px">
+                                            <form action="{{ route('logo.update') }}" method="post">
+                                                @csrf
+                                                <input type="hidden"  value="news_page_sidebar" name="news_page_sidebar">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="sidebar_total_recent_post" class="form-label">Total Recent Posts *</label>
+                                                        <input type="text" class="form-control" value="{{ $settings->sidebar_total_recent_post }}" name="sidebar_total_recent_post">                                                    
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="sidebar_news_heading_category" class="form-label">Heading - Category *</label>
+                                                        <input type="text" class="form-control" value="{{ $settings->sidebar_news_heading_category }}" name="sidebar_news_heading_category">                                                    
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="sidebar_news_heading_recent_post" class="form-label">Heading - Recent Post *</label>
+                                                        <input type="text" class="form-control" value="{{ $settings->sidebar_news_heading_recent_post }}" name="sidebar_news_heading_recent_post">                                                    
+                                                    </div>
+                                                </div>
+                                                <button type="submit" style="font-size: 20px; border-radius:5px;"
+                                                class="bn btn-primary">Update</button>                                       
+                                             </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4>Event Page - Sidebar Section</h4>
+                                        </div>
+                                        <div style="padding: 10px">
+                                            <form action="{{ route('logo.update') }}" method="post">
+                                                @csrf
+                                                <input type="hidden"  value="event_page_sidebar" name="event_page_sidebar">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="sidebar_total_recent_post" class="form-label">Total Upcoming Events *</label>
+                                                        <input type="text" class="form-control" value="{{ $settings->sidebar_total_upcoming_event }}" name="sidebar_total_upcoming_event">                                                    
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="sidebar_news_heading_category" class="form-label">Total Past Events *</label>
+                                                        <input type="text" class="form-control" value="{{ $settings->sidebar_total_past_event }}" name="sidebar_total_past_event">                                                    
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="sidebar_news_heading_recent_post" class="form-label">Total Past Events *</label>
+                                                        <input type="text" class="form-control" value="{{ $settings->sidebar_event_heading_upcoming }}" name="sidebar_event_heading_upcoming">                                                    
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="sidebar_news_heading_recent_post" class="form-label">Heading - Past Event *</label>
+                                                        <input type="text" class="form-control" value="{{ $settings->sidebar_event_heading_past }}" name="sidebar_event_heading_past">                                                    
+                                                    </div>
+                                                </div>
+                                                <button type="submit" style="font-size: 20px; border-radius:5px;"
+                                                class="bn btn-primary">Update</button>                                       
+                                             </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4>Service Single Page - Sidebar Section</h4>
+                                        </div>
+                                        <div style="padding: 10px">
+                                            <form action="{{ route('logo.update') }}" method="post">
+                                                @csrf
+                                                <input type="hidden"  value="service_single_page_sidebar" name="service_single_page_sidebar">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="sidebar_total_recent_post" class="form-label">Heading - Our Services *</label>
+                                                        <input type="text" class="form-control" value="{{ $settings->sidebar_service_heading_service }}" name="sidebar_service_heading_service">                                                    
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="sidebar_news_heading_category" class="form-label">Heading - Quick Contact *</label>
+                                                        <input type="text" class="form-control" value="{{ $settings->sidebar_service_heading_quick_contact	 }}" name="sidebar_service_heading_quick_contact">                                                    
+                                                    </div>
+                                                </div>
+                                                
+                                                <button type="submit" style="font-size: 20px; border-radius:5px;"
+                                                class="bn btn-primary">Update</button>                                       
+                                             </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4>Portfolio Single Page - Sidebar Section</h4>
+                                        </div>
+                                        <div style="padding: 10px">
+                                            <form action="{{ route('logo.update') }}" method="post">
+                                                @csrf
+                                                <input type="hidden"  value="portfolio_single_page_sidebar" name="portfolio_single_page_sidebar">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="sidebar_total_recent_post" class="form-label">Heading - Project Detail *</label>
+                                                        <input type="text" class="form-control" value="{{ $settings->sidebar_portfolio_heading_project_detail }}" name="sidebar_portfolio_heading_project_detail">                                                    
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="sidebar_news_heading_category" class="form-label">Heading - Quick Contact *</label>
+                                                        <input type="text" class="form-control" value="{{ $settings->sidebar_portfolio_heading_quick_contact	 }}" name="sidebar_portfolio_heading_quick_contact">                                                    
+                                                    </div>
+                                                </div>
+                                                
+                                                <button type="submit" style="font-size: 20px; border-radius:5px;"
+                                                class="bn btn-primary">Update</button>                                       
+                                             </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

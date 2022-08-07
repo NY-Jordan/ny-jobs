@@ -250,6 +250,11 @@
         Main.init()
     </script>
     <script src="{{ asset('vendor/tinymce/tinymce/tinymce.min.js') }}"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea#about_content'
+            });
+    </script>
 </body>
 
 </html>

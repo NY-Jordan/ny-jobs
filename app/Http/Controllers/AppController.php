@@ -6,6 +6,7 @@ use App\Models\tbl_category;
 use App\Models\tbl_client;
 use App\Models\tbl_events;
 use App\Models\tbl_news;
+use App\Models\tbl_page_home;
 use App\Models\tbl_page_photo_gallery;
 use App\Models\tbl_page_pricing;
 use App\Models\tbl_page_services;
@@ -121,9 +122,116 @@ class AppController extends Controller
             $settings->save();
             return back()->with('message', 'operation successfully');
         }
+        if (isset($request->cta)&&!empty($request->cta)) {
+            $request->validate([
+                'cta_text' =>  'required',
+                'cta_button_text' =>  'required',
+                'cta_button_url' =>  'required'
+            ]);
+            $settings = tbl_settings::find(1);
+            $settings->cta_text = $request->cta_text;
+            $settings->cta_button_text = $request->cta_button_text;
+            $settings->cta_button_url = $request->cta_button_url;
+            $settings->save();
+            return back()->with('message', 'operation successfully');
+        }
+        if (isset($request->cta_background_hidden)&&!empty($request->cta_background_hidden)) {
+            $request->validate([
+                'cta_background' =>  'required'
+            ]);
+            $path = $request->file('cta_background')->storeAs(
+                'images', 'cta_background'.rand(1, 1000), 'public'
+            );
+            $settings = tbl_settings::find(1);
+            $settings->cta_background = $path;
+            $settings->save();
+            return back()->with('message', 'operation successfully');
+        }
+        if (isset($request->email)&&!empty($request->email)) {
+            $request->validate([
+                'send_email_from' =>  'required',
+                'receive_email_to' =>  'required',
+            ]);
+            $settings = tbl_settings::find(1);
+            $settings->receive_email_to = $request->receive_email_to;
+            $settings->send_email_from = $request->send_email_from;
+            $settings->save();
+            return back()->with('message', 'operation successfully');
+        }
+        if (isset($request->news_page_sidebar)&&!empty($request->news_page_sidebar)) {
+            $request->validate([
+                'sidebar_total_recent_post' =>  'required',
+                'sidebar_news_heading_category' =>  'required',
+                'sidebar_news_heading_recent_post' =>  'required',
+            ]);
+            $settings = tbl_settings::find(1);
+            $settings->sidebar_total_recent_post = $request->sidebar_total_recent_post;
+            $settings->sidebar_news_heading_category = $request->sidebar_news_heading_category;
+            $settings->sidebar_news_heading_recent_post = $request->sidebar_news_heading_recent_post;
+            $settings->save();
+            return back()->with('message', 'operation successfully');
+        }
+        if (isset($request->event_page_sidebar)&&!empty($request->event_page_sidebar)) {
+            $request->validate([
+                'sidebar_total_upcoming_event' =>  'required',
+                'sidebar_total_past_event' =>  'required',
+                'sidebar_event_heading_upcoming' =>  'required',
+                'sidebar_event_heading_past' =>  'required',
+            ]);
+            $settings = tbl_settings::find(1);
+            $settings->sidebar_total_upcoming_event = $request->sidebar_total_upcoming_event;
+            $settings->sidebar_total_past_event = $request->sidebar_total_past_event;
+            $settings->sidebar_event_heading_upcoming = $request->sidebar_event_heading_upcoming;
+            $settings->sidebar_event_heading_past = $request->sidebar_event_heading_past;
+            $settings->save();
+            return back()->with('message', 'operation successfully');
+        }
+        if (isset($request->service_single_page_sidebar)&&!empty($request->service_single_page_sidebar)) {
+            $request->validate([
+                'sidebar_service_heading_service' =>  'required',
+                'sidebar_service_heading_quick_contact' =>  'required',
+            ]);
+            $settings = tbl_settings::find(1);
+            $settings->sidebar_service_heading_service = $request->sidebar_service_heading_service;
+            $settings->sidebar_service_heading_quick_contact = $request->sidebar_service_heading_quick_contact;
+            $settings->save();
+            return back()->with('message', 'operation successfully');
+        }
+        if (isset($request->portfolio_single_page_sidebar)&&!empty($request->portfolio_single_page_sidebar)) {
+            $request->validate([
+                'sidebar_portfolio_heading_project_detail' =>  'required',
+                'sidebar_portfolio_heading_quick_contact' =>  'required',
+            ]);
+            $settings = tbl_settings::find(1);
+            $settings->sidebar_portfolio_heading_project_detail = $request->sidebar_portfolio_heading_project_detail;
+            $settings->sidebar_portfolio_heading_quick_contact = $request->sidebar_portfolio_heading_quick_contact;
+            $settings->save();
+            return back()->with('message', 'operation successfully');
+        }
+        return back()->with('message', 'error, try again');
     }
     public function pages()
     {
-        return view('pages');
+        $pages   = tbl_page_home::find(1);
+        return view('pages', [
+            'pages' => $pages
+        ]);
+    }
+    public function update_pages(Request $request)
+    {
+        $pages   = tbl_page_home::find(1);
+        if (isset($request->meta_items)&&!empty($request->meta_items)) {
+            $request->validate([
+                'title' => 'required',
+                'meta_keyword' => 'required',
+                'meta_description' => 'required',
+            ]);
+            $pages->title = $request->title;
+            $pages->meta_keyword = $request->meta_keyword;
+            $pages->meta_description = $request->meta_description;
+            $pages->save();
+            return back()->with('message', 'error, try again');
+
+        }
     }
 }
