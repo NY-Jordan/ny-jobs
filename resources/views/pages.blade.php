@@ -674,7 +674,8 @@
                         <!-- Service End -->
 
                         <!-- Testimonial Start -->
-                        <div class="tab-pane fade show active" id="testimonial" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="tab-pane fade show active" id="testimonial" role="tabpanel"
+                            aria-labelledby="home-tab">
                             <div class="content-wrapper">
                                 <div class="col-md-12">
                                     <div class="card">
@@ -857,6 +858,40 @@
 
                                                 <div class="col-md-10">
                                                     <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1"
+                                                            class="form-label">Contact Address</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1"
+                                                            class="form-label">Contact Email
+                                                            Keyword</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1"
+                                                            class="form-label">Contact Phone
+                                                        </label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1"
+                                                            class="form-label">Contact Map (iframe Code)</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
                                                         <label for="exampleFormControlTextarea1" class="form-label">Meta
                                                             Keyword</label>
                                                         <textarea class="form-control" id="metaKeyword"
@@ -1003,6 +1038,9 @@
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
+
+                                                <!-- Editeur de Texte -->
+
                                                 <div class="col-md-10">
                                                     <div class="mb-3">
                                                         <label for="basicInput" class="form-label">Title</label>
@@ -1039,8 +1077,7 @@
                         <!-- Privacy End -->
 
                         <!-- Team Start -->
-                        <div class="tab-pane fade show active" id="team" role="tabpanel"
-                                aria-labelledby="home-tab">
+                        <div class="tab-pane fade show active" id="team" role="tabpanel" aria-labelledby="home-tab">
                             <div class="content-wrapper">
                                 <div class="col-md-12">
                                     <div class="card">
@@ -1093,7 +1130,7 @@
 
                         <!-- Research and training Start -->
                         <div class="tab-pane fade show active" id="research_training" role="tabpanel"
-                                aria-labelledby="home-tab">
+                            aria-labelledby="home-tab">
                             <div class="content-wrapper">
                                 <div class="col-md-12">
                                     <div class="card">
@@ -1146,7 +1183,7 @@
 
                         <!-- Climate Monotoring Start -->
                         <div class="tab-pane fade show active" id="climate_monotoring" role="tabpanel"
-                                aria-labelledby="home-tab">
+                            aria-labelledby="home-tab">
                             <div class="content-wrapper">
                                 <div class="col-md-12">
                                     <div class="card">
@@ -1197,9 +1234,12 @@
                         </div>
                         <!-- Climate Monotoring End -->
 
+
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-        @endsection
+@endsection
