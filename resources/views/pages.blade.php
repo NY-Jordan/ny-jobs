@@ -11,92 +11,98 @@
                 <div class="card-body">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#details"
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
                                 type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
                         </li>
 
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#footer"
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#about"
                                 type="button" role="tab" aria-controls="contact" aria-selected="false">About</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#email"
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#faq"
                                 type="button" role="tab" aria-controls="contact" aria-selected="false">FAQ</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#banner"
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#service"
                                 type="button" role="tab" aria-controls="contact" aria-selected="false">Service</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#testimonial"
                                 type="button" role="tab" aria-controls="contact"
                                 aria-selected="false">Testimonial</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#news"
                                 type="button" role="tab" aria-controls="contact" aria-selected="false">News</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#event"
                                 type="button" role="tab" aria-controls="contact" aria-selected="false">Event</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
                                 type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#search"
                                 type="button" role="tab" aria-controls="contact" aria-selected="false">Search</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#terms"
                                 type="button" role="tab" aria-controls="contact" aria-selected="false">Terms</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#privacy"
                                 type="button" role="tab" aria-controls="contact" aria-selected="false">Privacy</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#team"
                                 type="button" role="tab" aria-controls="contact" aria-selected="false">Team</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
-                                type="button" role="tab" aria-controls="contact" aria-selected="false">Research &
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#research_training" type="button" role="tab" aria-controls="contact"
+                                aria-selected="false">Research &
                                 Training</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
-                                type="button" role="tab" aria-controls="contact" aria-selected="false">Climate
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#climate_monotoring" type="button" role="tab" aria-controls="contact"
+                                aria-selected="false">Climate
                                 Monitoring</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
-                                type="button" role="tab" aria-controls="contact" aria-selected="false">Climate
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#climate_change" type="button" role="tab" aria-controls="contact"
+                                aria-selected="false">Climate
                                 Change</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
-                                type="button" role="tab" aria-controls="contact" aria-selected="false">Introduction
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#intro_climate_change" type="button" role="tab" aria-controls="contact"
+                                aria-selected="false">Introduction
                                 Bulletin</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#intro_bilan"
                                 type="button" role="tab" aria-controls="contact" aria-selected="false">Introduction
                                 Bilan</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
-                                type="button" role="tab" aria-controls="contact" aria-selected="false">Data Management
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#data_management" type="button" role="tab" aria-controls="contact"
+                                aria-selected="false">Data Management
                                 Remote Sensing & Geospatial</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
-                                type="button" role="tab" aria-controls="contact" aria-selected="false">Disaster Risk
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#disaster_risk" type="button" role="tab" aria-controls="contact"
+                                aria-selected="false">Disaster Risk
                                 Management</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#climate_app"
                                 type="button" role="tab" aria-controls="contact" aria-selected="false">Climate
                                 Application</button>
                         </li>
@@ -106,38 +112,41 @@
                                 Application</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
-                                type="button" role="tab" aria-controls="contact" aria-selected="false">Introduction to
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#intro_climate_change" type="button" role="tab" aria-controls="contact"
+                                aria-selected="false">Introduction to
                                 Climate Change</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
-                                type="button" role="tab" aria-controls="contact" aria-selected="false">Climate Change
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#climate_vulnerability" type="button" role="tab" aria-controls="contact"
+                                aria-selected="false">Climate Change
                                 Vulnerability and Impacts</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
-                                type="button" role="tab" aria-controls="contact" aria-selected="false">Climate Change
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#climate_adaptation" type="button" role="tab" aria-controls="contact"
+                                aria-selected="false">Climate Change
                                 Adaptation Actions</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
-                                type="button" role="tab" aria-controls="contact" aria-selected="false">Climate Change
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#climate_mitigation" type="button" role="tab" aria-controls="contact"
+                                aria-selected="false">Climate Change
                                 Mitigation Actions</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#sidebar"
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#ghgm"
                                 type="button" role="tab" aria-controls="contact" aria-selected="false">GHGM</button>
                         </li>
                     </ul>
 
-                    <!-- Home Start-->
                     <div class="tab-content" id="myTabContent">
+
+                        <!-- Home Start-->
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="content-wrapper">
-
                                 <!-- Meta Items Start -->
-
                                 <div class="col-md-12">
                                     <div class="card">
                                         <div class="card-header">
@@ -201,39 +210,57 @@
                                                             id="basicInput">
                                                     </div>
                                                 </div>
-                                                <!-- Editeur de texte -->
 
                                                 <textarea class="tinymce" name="content" data-tinymce="{}" id="mce_0"
                                                     aria-hidden="true" style="display: none;"></textarea>
-                                                <div role="application" class="tox tox-tinymce" aria-disabled="false" style="visibility: hidden; height: 50vh;">
+                                                <div role="application" class="tox tox-tinymce" aria-disabled="false"
+                                                    style="visibility: hidden; height: 50vh;">
                                                     <div class="tox-editor-container">
-                                                        <div data-alloy-vertical-dir="toptobottom" class="tox-editor-header">
-                                                            <div role="group" class="tox-toolbar-overlord" aria-disabled="false">
+                                                        <div data-alloy-vertical-dir="toptobottom"
+                                                            class="tox-editor-header">
+                                                            <div role="group" class="tox-toolbar-overlord"
+                                                                aria-disabled="false">
                                                                 <div role="group" class="tox-toolbar__primary">
-                                                                    <div title="history" role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group">
-                                                                        <button aria-label="Undo" title="Undo" type="button" tabindex="-1" class="tox-tbtn" aria-disabled="false">
+                                                                    <div title="history" role="toolbar"
+                                                                        data-alloy-tabstop="true" tabindex="-1"
+                                                                        class="tox-toolbar__group">
+                                                                        <button aria-label="Undo" title="Undo"
+                                                                            type="button" tabindex="-1" class="tox-tbtn"
+                                                                            aria-disabled="false">
                                                                             <span class="tox-icon tox-tbtn__icon-wrap">
-                                                                                <svg width="24" height="24" focusable="false">
-                                                                                    <path d="M6.4 8H12c3.7 0 6.2 2 6.8 5.1.6 2.7-.4 5.6-2.3 6.8a1 1 0 0 1-1-1.8c1.1-.6 1.8-2.7 1.4-4.6-.5-2.1-2.1-3.5-4.9-3.5H6.4l3.3 3.3a1 1 0 1 1-1.4 1.4l-5-5a1 1 0 0 1 0-1.4l5-5a1 1 0 0 1 1.4 1.4L6.4 8Z"
+                                                                                <svg width="24" height="24"
+                                                                                    focusable="false">
+                                                                                    <path
+                                                                                        d="M6.4 8H12c3.7 0 6.2 2 6.8 5.1.6 2.7-.4 5.6-2.3 6.8a1 1 0 0 1-1-1.8c1.1-.6 1.8-2.7 1.4-4.6-.5-2.1-2.1-3.5-4.9-3.5H6.4l3.3 3.3a1 1 0 1 1-1.4 1.4l-5-5a1 1 0 0 1 0-1.4l5-5a1 1 0 0 1 1.4 1.4L6.4 8Z"
                                                                                         fill-rule="nonzero">
                                                                                     </path>
                                                                                 </svg>
                                                                             </span>
                                                                         </button>
-                                                                        <button aria-label="Redo" title="Redo" type="button" tabindex="-1" class="tox-tbtn tox-tbtn--disabled" aria-disabled="true">
+                                                                        <button aria-label="Redo" title="Redo"
+                                                                            type="button" tabindex="-1"
+                                                                            class="tox-tbtn tox-tbtn--disabled"
+                                                                            aria-disabled="true">
                                                                             <span class="tox-icon tox-tbtn__icon-wrap">
-                                                                                <svg width="24" height="24" focusable="false">
-                                                                                    <path d="M17.6 10H12c-2.8 0-4.4 1.4-4.9 3.5-.4 2 .3 4 1.4 4.6a1 1 0 1 1-1 1.8c-2-1.2-2.9-4.1-2.3-6.8.6-3 3-5.1 6.8-5.1h5.6l-3.3-3.3a1 1 0 1 1 1.4-1.4l5 5a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.4-1.4l3.3-3.3Z"
+                                                                                <svg width="24" height="24"
+                                                                                    focusable="false">
+                                                                                    <path
+                                                                                        d="M17.6 10H12c-2.8 0-4.4 1.4-4.9 3.5-.4 2 .3 4 1.4 4.6a1 1 0 1 1-1 1.8c-2-1.2-2.9-4.1-2.3-6.8.6-3 3-5.1 6.8-5.1h5.6l-3.3-3.3a1 1 0 1 1 1.4-1.4l5 5a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.4-1.4l3.3-3.3Z"
                                                                                         fill-rule="nonzero">
                                                                                     </path>
                                                                                 </svg>
                                                                             </span>
                                                                         </button>
                                                                     </div>
-                                                                    <div title="formatting" role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group">
-                                                                        <button aria-label="Bold" title="Bold" type="button" tabindex="-1" class="tox-tbtn" aria-disabled="false" aria-pressed="false">
+                                                                    <div title="formatting" role="toolbar"
+                                                                        data-alloy-tabstop="true" tabindex="-1"
+                                                                        class="tox-toolbar__group">
+                                                                        <button aria-label="Bold" title="Bold"
+                                                                            type="button" tabindex="-1" class="tox-tbtn"
+                                                                            aria-disabled="false" aria-pressed="false">
                                                                             <span class="tox-icon tox-tbtn__icon-wrap">
-                                                                                <svg width="24" height="24" focusable="false">
+                                                                                <svg width="24" height="24"
+                                                                                    focusable="false">
                                                                                     <path
                                                                                         d="M7.8 19c-.3 0-.5 0-.6-.2l-.2-.5V5.7c0-.2 0-.4.2-.5l.6-.2h5c1.5 0 2.7.3 3.5 1 .7.6 1.1 1.4 1.1 2.5a3 3 0 0 1-.6 1.9c-.4.6-1 1-1.6 1.2.4.1.9.3 1.3.6s.8.7 1 1.2c.4.4.5 1 .5 1.6 0 1.3-.4 2.3-1.3 3-.8.7-2.1 1-3.8 1H7.8Zm5-8.3c.6 0 1.2-.1 1.6-.5.4-.3.6-.7.6-1.3 0-1.1-.8-1.7-2.3-1.7H9.3v3.5h3.4Zm.5 6c.7 0 1.3-.1 1.7-.4.4-.4.6-.9.6-1.5s-.2-1-.7-1.4c-.4-.3-1-.4-2-.4H9.4v3.8h4Z"
                                                                                         fill-rule="evenodd">
@@ -241,8 +268,7 @@
                                                                                 </svg>
                                                                             </span>
                                                                         </button>
-                                                                        <button
-                                                                            aria-label="Italic" title="Italic"
+                                                                        <button aria-label="Italic" title="Italic"
                                                                             type="button" tabindex="-1" class="tox-tbtn"
                                                                             aria-disabled="false"
                                                                             aria-pressed="false"><span
@@ -252,7 +278,10 @@
                                                                                     <path
                                                                                         d="m16.7 4.7-.1.9h-.3c-.6 0-1 0-1.4.3-.3.3-.4.6-.5 1.1l-2.1 9.8v.6c0 .5.4.8 1.4.8h.2l-.2.8H8l.2-.8h.2c1.1 0 1.8-.5 2-1.5l2-9.8.1-.5c0-.6-.4-.8-1.4-.8h-.3l.2-.9h5.8Z"
                                                                                         fill-rule="evenodd"></path>
-                                                                                </svg></span></button><button  aria-label="Underline" title="Underline" type="button" tabindex="-1" class="tox-tbtn"                                                aria-disabled="false"
+                                                                                </svg></span></button><button
+                                                                            aria-label="Underline" title="Underline"
+                                                                            type="button" tabindex="-1" class="tox-tbtn"
+                                                                            aria-disabled="false"
                                                                             aria-pressed="false"><span
                                                                                 class="tox-icon tox-tbtn__icon-wrap"><svg
                                                                                     width="24" height="24"
@@ -277,7 +306,8 @@
                                                                                             d="M5 11h14a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
                                                                                             fill-rule="nonzero"></path>
                                                                                     </g>
-                                                                                </svg></span></button></div>
+                                                                                </svg></span></button>
+                                                                    </div>
                                                                     <div title="alignment" role="toolbar"
                                                                         data-alloy-tabstop="true" tabindex="-1"
                                                                         class="tox-toolbar__group"><button
@@ -476,11 +506,697 @@
 
 
                                     </div>
+                                </div>
+                                <!-- Welcome Section (Video Background) End -->
 
 
+
+                            </div>
+                        </div>
+                        <!-- Home End -->
+
+                        <!-- About Start -->
+                        <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="content-wrapper">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="col-md-10">
+                                                <div class="mb-3">
+                                                    <label for="basicInput" class="form-label">About Heading</label>
+                                                    <input type="text" placeholder="Title" class="form-control"
+                                                        id="basicInput">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+
+                                                <!-- Editeur de texte -->
+
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="basicInput" class="form-label">Title</label>
+                                                        <input type="text" placeholder="Title" class="form-control"
+                                                            id="basicInput">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Keyword</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Description</label>
+                                                        <textarea class="form-control" id="metaDescription"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button class="btn btn-primary ">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- About End -->
+
+                        <!-- FAQ Start -->
+                        <div class="tab-pane fade show active" id="faq" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="content-wrapper">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="col-md-10">
+                                                <div class="mb-3">
+                                                    <label for="basicInput" class="form-label">FAQ
+                                                        Heading</label>
+                                                    <input type="text" placeholder="Title" class="form-control"
+                                                        id="basicInput">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="basicInput" class="form-label">Title</label>
+                                                        <input type="text" placeholder="Title" class="form-control"
+                                                            id="basicInput">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Keyword</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Description</label>
+                                                        <textarea class="form-control" id="metaDescription"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button class="btn btn-primary ">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ End -->
+
+                        <!-- Service Start -->
+                        <div class="tab-pane fade show active" id="service" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="content-wrapper">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="col-md-10">
+                                                <div class="mb-3">
+                                                    <label for="basicInput" class="form-label">Service
+                                                        Heading</label>
+                                                    <input type="text" placeholder="Title" class="form-control"
+                                                        id="basicInput">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="basicInput" class="form-label">Title</label>
+                                                        <input type="text" placeholder="Title" class="form-control"
+                                                            id="basicInput">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Keyword</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Description</label>
+                                                        <textarea class="form-control" id="metaDescription"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button class="btn btn-primary ">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service End -->
+
+                        <!-- Testimonial Start -->
+                        <div class="tab-pane fade show active" id="testimonial" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="content-wrapper">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="col-md-10">
+                                                <div class="mb-3">
+                                                    <label for="basicInput" class="form-label">Testimonial
+                                                        Heading</label>
+                                                    <input type="text" placeholder="Title" class="form-control"
+                                                        id="basicInput">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="basicInput" class="form-label">Title</label>
+                                                        <input type="text" placeholder="Title" class="form-control"
+                                                            id="basicInput">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Keyword</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Description</label>
+                                                        <textarea class="form-control" id="metaDescription"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button class="btn btn-primary ">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonials End -->
+
+
+                        <!-- News Start -->
+                        <div class="tab-pane fade show active" id="news" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="content-wrapper">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="col-md-10">
+                                                <div class="mb-3">
+                                                    <label for="basicInput" class="form-label">News
+                                                        Heading</label>
+                                                    <input type="text" placeholder="Title" class="form-control"
+                                                        id="basicInput">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="basicInput" class="form-label">Title</label>
+                                                        <input type="text" placeholder="Title" class="form-control"
+                                                            id="basicInput">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Keyword</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Description</label>
+                                                        <textarea class="form-control" id="metaDescription"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button class="btn btn-primary ">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- News End -->
+
+                        <!-- Event Start -->
+                        <div class="tab-pane fade show active" id="event" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="content-wrapper">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="col-md-10">
+                                                <div class="mb-3">
+                                                    <label for="basicInput" class="form-label">Event
+                                                        Heading</label>
+                                                    <input type="text" placeholder="Title" class="form-control"
+                                                        id="basicInput">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="basicInput" class="form-label">Title</label>
+                                                        <input type="text" placeholder="Title" class="form-control"
+                                                            id="basicInput">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Keyword</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Description</label>
+                                                        <textarea class="form-control" id="metaDescription"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button class="btn btn-primary ">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Event End -->
+
+                        <!-- Contact Start -->
+                        <div class="tab-pane fade show active" id="contact" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="content-wrapper">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="col-md-10">
+                                                <div class="mb-3">
+                                                    <label for="basicInput" class="form-label">Contact
+                                                        Heading</label>
+                                                    <input type="text" placeholder="Title" class="form-control"
+                                                        id="basicInput">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="basicInput" class="form-label">Title</label>
+                                                        <input type="text" placeholder="Title" class="form-control"
+                                                            id="basicInput">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Keyword</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Description</label>
+                                                        <textarea class="form-control" id="metaDescription"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button class="btn btn-primary ">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Contact End -->
+
+                        <!-- Search Start -->
+                        <div class="tab-pane fade show active" id="search" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="content-wrapper">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="col-md-10">
+                                                <div class="mb-3">
+                                                    <label for="basicInput" class="form-label">Search
+                                                        Heading</label>
+                                                    <input type="text" placeholder="Title" class="form-control"
+                                                        id="basicInput">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="basicInput" class="form-label">Title</label>
+                                                        <input type="text" placeholder="Title" class="form-control"
+                                                            id="basicInput">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Keyword</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Description</label>
+                                                        <textarea class="form-control" id="metaDescription"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button class="btn btn-primary ">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Search End -->
+
+                        <!-- Term Start -->
+                        <div class="tab-pane fade show active" id="terms" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="content-wrapper">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="col-md-10">
+                                                <div class="mb-3">
+                                                    <label for="basicInput" class="form-label">Term
+                                                        Heading</label>
+                                                    <input type="text" placeholder="Title" class="form-control"
+                                                        id="basicInput">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="basicInput" class="form-label">Title</label>
+                                                        <input type="text" placeholder="Title" class="form-control"
+                                                            id="basicInput">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Keyword</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Description</label>
+                                                        <textarea class="form-control" id="metaDescription"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button class="btn btn-primary ">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Term End -->
+
+                        <!-- Privacy Start -->
+                        <div class="tab-pane fade show active" id="privacy" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="content-wrapper">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="col-md-10">
+                                                <div class="mb-3">
+                                                    <label for="basicInput" class="form-label">Privacy
+                                                        Heading</label>
+                                                    <input type="text" placeholder="Title" class="form-control"
+                                                        id="basicInput">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="basicInput" class="form-label">Title</label>
+                                                        <input type="text" placeholder="Title" class="form-control"
+                                                            id="basicInput">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Keyword</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Description</label>
+                                                        <textarea class="form-control" id="metaDescription"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button class="btn btn-primary ">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Privacy End -->
+
+                        <!-- Team Start -->
+                        <div class="tab-pane fade show active" id="team" role="tabpanel"
+                                aria-labelledby="home-tab">
+                            <div class="content-wrapper">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="col-md-10">
+                                                <div class="mb-3">
+                                                    <label for="basicInput" class="form-label">Team
+                                                        Heading</label>
+                                                    <input type="text" placeholder="Title" class="form-control"
+                                                        id="basicInput">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="basicInput" class="form-label">Title</label>
+                                                        <input type="text" placeholder="Title" class="form-control"
+                                                            id="basicInput">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Keyword</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Description</label>
+                                                        <textarea class="form-control" id="metaDescription"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button class="btn btn-primary ">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Team End -->
+
+                        <!-- Research and training Start -->
+                        <div class="tab-pane fade show active" id="research_training" role="tabpanel"
+                                aria-labelledby="home-tab">
+                            <div class="content-wrapper">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="col-md-10">
+                                                <div class="mb-3">
+                                                    <label for="basicInput" class="form-label">Portfolio
+                                                        Heading</label>
+                                                    <input type="text" placeholder="Title" class="form-control"
+                                                        id="basicInput">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="basicInput" class="form-label">Title</label>
+                                                        <input type="text" placeholder="Title" class="form-control"
+                                                            id="basicInput">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Keyword</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Description</label>
+                                                        <textarea class="form-control" id="metaDescription"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button class="btn btn-primary ">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Research and training End -->
+
+                        <!-- Climate Monotoring Start -->
+                        <div class="tab-pane fade show active" id="climate_monotoring" role="tabpanel"
+                                aria-labelledby="home-tab">
+                            <div class="content-wrapper">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="col-md-10">
+                                                <div class="mb-3">
+                                                    <label for="basicInput" class="form-label">Climate Monitoring
+                                                        Heading</label>
+                                                    <input type="text" placeholder="Title" class="form-control"
+                                                        id="basicInput">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="basicInput" class="form-label">Title</label>
+                                                        <input type="text" placeholder="Title" class="form-control"
+                                                            id="basicInput">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Keyword</label>
+                                                        <textarea class="form-control" id="metaKeyword"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Meta
+                                                            Description</label>
+                                                        <textarea class="form-control" id="metaDescription"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button class="btn btn-primary ">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Climate Monotoring End -->
+
                     </div>
                 </div>
             </div>
