@@ -68,4 +68,8 @@ class AppController extends Controller
             return back()->with('message', 'operation successfully');
         }
     }
+    public function pages()
+    {
+        return view('pages');
+    }
 }

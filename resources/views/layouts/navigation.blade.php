@@ -30,7 +30,7 @@
                 </a>
             </li>
             <li>
-                <a href="index.html" class="link">
+                <a href="{{ route('pages') }}" class="link">
                     <i class="ti-home"></i>
                     <span>Pages</span>
                 </a>

@@ -246,6 +246,7 @@
     <script>
         Main.init()
     </script>
+    <script src="{{ asset('vendor/tinymce/tinymce/tinymce.min.js') }}"></script>
 </body>
 
 </html>
