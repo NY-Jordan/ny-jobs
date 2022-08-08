@@ -168,6 +168,9 @@
         </header>
         @include('layouts/navigation')       
         <div class="main-content">
+            @foreach ($errors->all() as $error)
+        <div class="alert alert-info">{{ $error }}</div>
+    @endforeach
             @yield('content')
         </div>
         <div class="settings">
