@@ -1,260 +1,126 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
+  <head>
+    <title>JobBoard &mdash; Website Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Free-Template.co" />
+    <link rel="shortcut icon" href="ftco-32x32.png">
+    
+    <link rel="stylesheet" href="{{ asset('dist/css/custom-bs.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/css/jquery.fancybox.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/fonts/icomoon/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/fonts/line-icons/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/css/animate.min.css') }}">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard &mdash; Arfa</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-        crossorigin="anonymous" />
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{{ asset('dist/css/style.css') }}">    
+  </head>
+  <body id="top">
 
-    <link rel="stylesheet" href="{{ asset('vendor/bootstrap/dist/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/themify-icons/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/perfect-scrollbar/css/perfect-scrollbar.css') }}">
-
-    <!-- CSS for this page only -->
-<link rel="stylesheet" href="{{ asset('vendor/chart.js/dist/Chart.min.css') }}">
-    <!-- End CSS  -->
-
-    <link rel="stylesheet" href="{{ asset('assets/css/style.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-override.min.css') }}">
-    <link rel="stylesheet" id="theme-color" href="{{ asset('assets/css/dark.min.css') }}">
-</head>
-
-<body>
-    <div id="app">
-        <div class="shadow-header"></div>
-        <header class="header-navbar fixed">
-            <div class="toggle-mobile action-toggle"><i class="fas fa-bars"></i></div>
-            <div class="header-wrapper">
-                <div class="header-left">
-                    <div class="theme-switch-icon"></div>
-                </div>
-                <div class="header-content">
-                    <div class="notification dropdown">
-                        <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="far fa-envelope"></i>
-                        </a>
-                        <ul class="dropdown-menu medium">
-                            <li class="menu-header">
-                                <a class="dropdown-item" href="#">Message</a>
-                            </li>
-                            <li class="menu-content ps-menu">
-                                <a href="#">
-                                    <div class="message-image">
-                                        <img src="../assets/images/avatar1.png" class="rounded-circle w-100" alt="user1">
-                                    </div>
-                                    <div class="message-content read">
-                                        <div class="subject">
-                                            John
-                                        </div>
-                                        <div class="body">
-                                            Please call me at 9pm
-                                        </div>
-                                        <div class="time">Just now</div>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="message-image">
-                                        <img src="../assets/images/avatar2.png" class="rounded-circle w-100" alt="user1">
-                                    </div>
-                                    <div class="message-content">
-                                        <div class="subject">
-                                            Michele
-                                        </div>
-                                        <div class="body">
-                                            Please come to my party
-                                        </div>
-                                        <div class="time">3 hours ago</div>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="message-image">
-                                        <img src="../assets/images/avatar1.png" class="rounded-circle w-100" alt="user1">
-                                    </div>
-                                    <div class="message-content read">
-                                        <div class="subject">
-                                            Brad
-                                        </div>
-                                        <div class="body">
-                                            I have something to discuss, please call me soon
-                                        </div>
-                                        <div class="time">3 hours ago</div>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="message-image">
-                                        <img src="../assets/images/avatar2.png" class="rounded-circle w-100" alt="user1">
-                                    </div>
-                                    <div class="message-content">
-                                        <div class="subject">
-                                            Anel
-                                        </div>
-                                        <div class="body">
-                                            Sorry i'm late
-                                        </div>
-                                        <div class="time">8 hours ago</div>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="message-image">
-                                        <img src="../assets/images/avatar2.png" class="rounded-circle w-100" alt="user1">
-                                    </div>
-                                    <div class="message-content">
-                                        <div class="subject">
-                                            Mary
-                                        </div>
-                                        <div class="body">
-                                            Please answer my question last night
-                                        </div>
-                                        <div class="time">Last month</div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="notification dropdown">
-                        <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="far fa-bell"></i>
-                            <span class="badge">12</span>
-                        </a>
-                        <ul class="dropdown-menu medium">
-                            <li class="menu-header">
-                                <a class="dropdown-item" href="#">Notification</a>
-                            </li>
-                            <li class="menu-content ps-menu">
-                                <a href="#">
-                                    <div class="message-icon text-danger">
-                                        <i class="fas fa-exclamation-triangle"></i>
-                                    </div>
-                                    <div class="message-content read">
-                                        <div class="body">
-                                            There's incoming event, don't miss it!!
-                                        </div>
-                                        <div class="time">Just now</div>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="message-icon text-info">
-                                        <i class="fas fa-info"></i>
-                                    </div>
-                                    <div class="message-content read">
-                                        <div class="body">
-                                            Your licence will expired soon
-                                        </div>
-                                        <div class="time">3 hours ago</div>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="message-icon text-success">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <div class="message-content">
-                                        <div class="body">
-                                            Successfully register new user
-                                        </div>
-                                        <div class="time">8 hours ago</div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    @include('components/relative-header')
-
-                </div>
-            </div>
-        </header>
-        @include('layouts/navigation')       
-        <div class="main-content">
-            @foreach ($errors->all() as $error)
-        <div class="alert alert-info">{{ $error }}</div>
-    @endforeach
-            @yield('content')
-        </div>
-        <div class="settings">
-            <div class="settings-icon-wrapper">
-                <div class="settings-icon">
-                    <i class="ti ti-settings"></i>
-                </div>
-            </div>
-            <div class="settings-content">
-                <ul>
-                    <li class="fix-header">
-                        <div class="fix-header-wrapper">
-                            <div class="form-check form-switch lg">
-                                <label class="form-check-label" for="settingsFixHeader">Fixed Header</label>
-                                <input class="form-check-input toggle-settings" name="Header" type="checkbox"
-                                    id="settingsFixHeader">
-                            </div>
-
-                        </div>
-                    </li>
-                    <li class="fix-footer">
-                        <div class="fix-footer-wrapper">
-                            <div class="form-check form-switch lg">
-                                <label class="form-check-label" for="settingsFixFooter">Fixed Footer</label>
-                                <input class="form-check-input toggle-settings" name="Footer" type="checkbox"
-                                    id="settingsFixFooter">
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="theme-switch">
-                            <label for="">Theme Color</label>
-                            <div>
-                                <div class="form-check form-check-inline lg">
-                                    <input class="form-check-input lg theme-color" type="radio" name="ThemeColor" id="light"
-                                        value="light">
-                                    <label class="form-check-label" for="light">Light</label>
-                                </div>
-                                <div class="form-check form-check-inline lg">
-                                    <input class="form-check-input lg theme-color" type="radio" name="ThemeColor" id="dark"
-                                        value="dark">
-                                    <label class="form-check-label" for="dark">Dark</label>
-                                </div>
-
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="fix-footer-wrapper">
-                            <div class="form-check form-switch lg">
-                                <label class="form-check-label" for="settingsFixFooter">Collapse Sidebar</label>
-                                <input class="form-check-input toggle-settings" name="Sidebar" type="checkbox"
-                                    id="settingsFixFooter">
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div> 
-
-        <footer>
-            Copyright © 2022 &nbsp <a href="https://www.youtube.com/c/mulaidarinull" target="_blank" class="ml-1"> Mulai Dari Null </a> <span> . All rights Reserved</span>
-        </footer>
-        <div class="overlay action-toggle">
-        </div>
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
     </div>
-    <script src="{{ asset('vendor/bootstrap/dist/js/bootstrap.bundle.js') }}"></script>
-    <script src="{{ asset('vendor/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
+  </div>
+  <div class="site-wrap">
 
-    <!-- js for this page only -->
-<script src="{{ "vendor/chart.js/dist/Chart.min.js" }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-<script src="{{ 'assets/js/page/index.js' }}"></script>
-    <!-- ======= -->
-    <script src="{{ asset('assets/js/main.js') }}"></script>
-    <script>
-        Main.init()
-    </script>
-    <script src="{{ asset('vendor/tinymce/tinymce/tinymce.min.js') }}"></script>
-    <script>
-        tinymce.init({
-            selector: 'textarea#about_content'
-            });
-    </script>
-</body>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> 
+    @include('layouts/navigation')
 
-</html>
+    @yield('content')
+    <footer class="site-footer">
+
+        <a href="#top" class="smoothscroll scroll-top">
+          <span class="icon-keyboard_arrow_up"></span>
+        </a>
+  
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Search Trending</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Web Developers</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">HTML5</a></li>
+                <li><a href="#">CSS3</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Company</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Resources</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Support</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Contact Us</h3>
+              <div class="footer-social">
+                <a href="#"><span class="icon-facebook"></span></a>
+                <a href="#"><span class="icon-twitter"></span></a>
+                <a href="#"><span class="icon-instagram"></span></a>
+                <a href="#"><span class="icon-linkedin"></span></a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row text-center">
+            <div class="col-12">
+              <p class="copyright"><small>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+    </div>
+  
+      <!-- SCRIPTS -->
+      <script src="{{ asset('dist/js/jquery.min.js') }}"></script>
+      <script src="{{ asset('dist/js/bootstrap.bundle.min.js') }}"></script>
+      <script src="{{ asset('dist/js/isotope.pkgd.min.js') }}"></script>
+      <script src="{{ asset('dist/js/stickyfill.min.js') }}"></script>
+      <script src="{{ asset('dist/js/jquery.fancybox.min.js') }}"></script>
+      <script src="{{ asset('dist/js/jquery.easing.1.3.js') }}"></script>
+      
+      <script src="{{ asset('dist/js/jquery.waypoints.min.js') }}"></script>
+      <script src="{{ asset('dist/js/jquery.animateNumber.min.js') }}"></script>
+      <script src="{{ asset('dist/js/owl.carousel.min.js') }}"></script>
+      
+      <script src="{{ asset('dist/js/bootstrap-select.min.js') }}"></script>
+      
+      <script src="{{ asset('dist/js/custom.js') }}"></script>
+  
+       
+    </body>
+  </html>
+
+
+    
