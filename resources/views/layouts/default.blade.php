@@ -40,7 +40,18 @@
       <div class="site-mobile-menu-body"></div>
     </div> 
     @include('layouts/navigation')
-
+    @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                <div class="alert alert-success mt-2" > <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>{{ $error }}</div>
+            @endforeach
+        @endif
+        @if (session('message'))
+            <div class="alert alert-success dt-success-msg f12" > <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button> {{ session('message') }}</div>
+        @endif
     @yield('content')
     <footer class="site-footer">
 
@@ -103,7 +114,11 @@
     </div>
   
       <!-- SCRIPTS -->
+      <script src="{{ asset('assets/js/popper.min.js') }}"></script>
+      
+
       <script src="{{ asset('dist/js/jquery.min.js') }}"></script>
+
       <script src="{{ asset('dist/js/bootstrap.bundle.min.js') }}"></script>
       <script src="{{ asset('dist/js/isotope.pkgd.min.js') }}"></script>
       <script src="{{ asset('dist/js/stickyfill.min.js') }}"></script>
@@ -117,6 +132,7 @@
       <script src="{{ asset('dist/js/bootstrap-select.min.js') }}"></script>
       
       <script src="{{ asset('dist/js/custom.js') }}"></script>
+      <script src="{{ asset('dist/js/login.js') }}"></script>
   
        
     </body>
