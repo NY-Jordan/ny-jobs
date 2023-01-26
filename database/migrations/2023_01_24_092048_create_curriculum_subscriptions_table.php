@@ -17,8 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('falt_rate');
             $table->integer('price');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->date('expired_at');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('offer_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

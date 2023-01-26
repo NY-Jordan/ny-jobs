@@ -23,18 +23,21 @@ class OffersSeeder extends Seeder
         DB::table('offers')->insert([
             'title' => ' 3 publication d\'offres',
             'type' => 'package',
+            'number' => 3,
             'price' => 12000,
         ]);
 
         DB::table('offers')->insert([
             'title' => '5 publication d\'offres',
             'type' => 'package',
+            'number' => 5,
             'price' => 19000,
         ]);
 
         DB::table('offers')->insert([
             'title' => '10 publication d\'offres',
             'type' => 'package',
+            'number' => 10,
             'price' => 35000,
         ]);
 
@@ -42,6 +45,7 @@ class OffersSeeder extends Seeder
             'title' => '20 publication d\'offres \\ mois',
             'type' => 'subscription',
             'price' => 50000,
+            'number' => 20,
             'days' => '30 days',
         ]);
 
@@ -49,6 +53,7 @@ class OffersSeeder extends Seeder
             'title' => '50 publication d\'offres \\ mois',
             'type' => 'subscription',
             'price' => 80000,
+            'number' => 50,
             'days' => '30 days',
         ]);
 
@@ -56,6 +61,7 @@ class OffersSeeder extends Seeder
             'title' => '100 publication d\'offres \\ mois',
             'type' => 'subscription',
             'price' => 120000,
+            'number' => 100,
             'days' => '30 days',
         ]);
 

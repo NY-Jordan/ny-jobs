@@ -17,9 +17,12 @@
     <link rel="stylesheet" href="{{ asset('dist/fonts/line-icons/style.css') }}">
     <link rel="stylesheet" href="{{ asset('dist/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('dist/css/animate.min.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('dist/css/quill.snow.css') }}">
+    
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="{{ asset('dist/css/style.css') }}">    
+    <link rel="stylesheet" href="{{ asset('dist/css/style.css') }}">  
+    @yield('header')  
+      
   </head>
   <body id="top">
 
@@ -128,7 +131,7 @@
       <script src="{{ asset('dist/js/jquery.waypoints.min.js') }}"></script>
       <script src="{{ asset('dist/js/jquery.animateNumber.min.js') }}"></script>
       <script src="{{ asset('dist/js/owl.carousel.min.js') }}"></script>
-      
+      <script src="{{ asset('dist/js/quill.min.js') }}"></script>
       <script src="{{ asset('dist/js/bootstrap-select.min.js') }}"></script>
       
       <script src="{{ asset('dist/js/custom.js') }}"></script>

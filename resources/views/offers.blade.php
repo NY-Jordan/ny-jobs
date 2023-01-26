@@ -45,7 +45,7 @@
                                     <h4><strong>{{ $package->price }}</strong> Fcfa</h4>
                                 </div>
                                 <div class="col-6">
-                                    <button class="btn btn-primary">Subscribe</button>
+                                    <a href="{{ route('initSubscription', $package->id) }}" class="btn btn-primary">Subscribe</a>
                                 </div>
                             </div>
                         @endforeach
@@ -70,7 +70,7 @@
                                     <small>mois</small>
                                 </div>
                                 <div class="col-4">
-                                    <button class="btn btn-primary">Subscribe</button>
+                                    <a href="{{ route('initSubscription', $subscription->id) }}" class="btn btn-primary">Subscribe</a>
                                 </div>
                             </div>
                         @endforeach
@@ -107,7 +107,7 @@
                             <h4 class="d-inline text-left"><strong>{{ $curriculum->price }} Fcfa</strong> </h4>
                         </div>
                         <div class="col-4">
-                            <button class="btn btn-primary">Subscribe</button>
+                            <a href="{{ route('initSubscription', $curriculum->id) }}" class="btn btn-primary">Subscribe</a>
                         </div>
                     </div>
                 @endforeach

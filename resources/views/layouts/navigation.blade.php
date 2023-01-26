@@ -76,6 +76,13 @@
                           </div>
                         </div>
                       </div>
+                      <div class="row">
+                        <div class="col-4"></div>
+                        <div class="col-4">
+                          <p>pas de compte  ? creer un <a href="{{ route('register') }}">ici</a> </p>
+                        </div>
+                        <div class="col-4"></div>
+                      </div>
                   </div>
                 </div>
                 <div class="modal-footer">

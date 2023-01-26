@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->integer('price');
             $table->string('type');
+            $table->integer('number')->nullable();
             $table->string('days')->nullable();
             $table->timestamps();
         });

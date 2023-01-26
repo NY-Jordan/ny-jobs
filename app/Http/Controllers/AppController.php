@@ -17,12 +17,22 @@ class AppController extends Controller
 
 {
 
+    /**
+     * index function 
+     *  
+     *  * @return \Illuminate\View\View (home page)
+     */
     public function index()
     {
         $jobs = Job::getRecentJobs();
         return view('index', ['jobs' => $jobs]);
     }
 
+     /**
+     * offers function
+     * show the list of offers 
+     *  @return \Illuminate\View\View
+     */
     public function offers()
     {
         $packages = Offers::where('type', 'package')->get();
@@ -31,7 +41,11 @@ class AppController extends Controller
         return view('offers', compact('packages', 'subscriptions', 's_curriculum'));
     }
 
-
+    /**
+     * cvTheque function
+     * 
+     * @return \Illuminate\View\View
+     */
     public function cvTheque()
     {
         $curriculum = Curriculum::all();
@@ -42,7 +56,7 @@ class AppController extends Controller
     /**
      * addJob function
      * check if user had a package or subscription, if not return to offers view
-     * @return void
+     * @return \Illuminate\View\View
      */
     public function addJob()
     {
