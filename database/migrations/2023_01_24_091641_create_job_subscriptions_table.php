@@ -19,7 +19,7 @@ return new class extends Migration
                 $table->integer('price');
                 $table->integer('number');
                 $table->date('expired_at');
-                $table->foreignId('offer_id')->constrained()->onDelete('cascade');
+                $table->foreignId('company_id')->constrained()->onDelete('cascade');
                 $table->foreignId('user_id')->constrained()->onDelete('cascade');
                 $table->timestamps();
         });
