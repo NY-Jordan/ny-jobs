@@ -24,7 +24,7 @@ class CurriculumController extends Controller
             'cv' => "required",
         ]);
         try {
-            $path = AppService::saveFile($request->name, $request->file("cv"));
+            $path = AppService::saveFile($request->name, $request->file("cv"), "cv");
             if ($path) {
                 Curriculum::create([
                     'name' => $request->name,

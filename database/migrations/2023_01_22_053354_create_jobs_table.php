@@ -19,9 +19,10 @@ return new class extends Migration
             $table->text('description');
             $table->string('type');
             $table->string('status');
+            $table->string('location');
+            $table->string('apply_by');
+            $table->string('to_apply');
             $table->integer('view')->default(0);
-            $table->foreignId('category_id')->constrained()->onDelete('cascade');
-            $table->foreignId('location_id')->constrained()->onDelete('cascade');
             $table->foreignId('company_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

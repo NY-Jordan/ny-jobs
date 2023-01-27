@@ -43,7 +43,7 @@ class RegisteredUserController extends Controller
         ]);
         
 
-        $path = AppService::saveFile($request->name, $request->file("logo"));
+        $path = AppService::saveFile($request->name, $request->file("logo"), "company");
 
         $company = Company::create([
             'name' => $request->name,

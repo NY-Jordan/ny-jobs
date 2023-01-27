@@ -117,6 +117,7 @@
     </div>
   
       <!-- SCRIPTS -->
+      
       <script src="{{ asset('assets/js/popper.min.js') }}"></script>
       
 
@@ -136,6 +137,7 @@
       
       <script src="{{ asset('dist/js/custom.js') }}"></script>
       <script src="{{ asset('dist/js/login.js') }}"></script>
+      @yield('script')
   
        
     </body>

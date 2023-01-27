@@ -53,25 +53,5 @@ class AppController extends Controller
     }
 
 
-    /**
-     * addJob function
-     * check if user had a package or subscription, if not return to offers view
-     * @return \Illuminate\View\View
-     */
-    public function addJob()
-    {
-        try {
-            if (Auth::user()) {
-                $package = JobService::checkPackage(Auth::user()->id);
-                $subscription = JobService::checkSubscription(Auth::user()->id);
-                if ($package || $subscription) {
-                    return redirect('/add/new/job');
-                }
-                return redirect('/offers');
-            }
-            return redirect('/offers');
-        } catch (\Throwable $th) {
-            return redirect()->back()->with('error', 'error refresh and try again');
-        }
-    }
+    
 }

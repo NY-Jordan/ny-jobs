@@ -20,14 +20,13 @@ class JobService
      * checkPackage function
      * check if user has a job package for do a publication
      * @param integer $id
-     * @return boolean
+     * @return JobPackage
      */
-    public static function checkPackage(int $id) : bool
+    public static function checkPackage(int $id) 
     {
         try {
-            $package = JobPackage::where('user_id', $id)->first();
-            $return  = ($package) ?  true : false;
-            return $return; 
+            $package = JobPackage::where('company_id', $id)->first();
+            return $package; 
         } catch (\Throwable $th) {
             return false;
         }
@@ -38,14 +37,13 @@ class JobService
      * checkSubscription function
      *
      * @param integer $id
-     * @return boolean
+     * @return JobSubscription
      */
-    public static function checkSubscription(int $id) : bool
+    public static function checkSubscription(int $id)
     {
         try {
             $subscription = JobSubscription::where('user_id', $id)->first();
-            $return  = ($subscription) ?  true : false;
-            return $return; 
+            return $subscription; 
         } catch (\Throwable $th) {
             return false;
         }

@@ -15,10 +15,10 @@ class AppService
      * @param [type] $file
      * @return string $path
      */
-    public static function saveFile(String $name,  $file)
+    public static function saveFile(String $name,  $file, $folder)
     {
         try {
-            $filename = 'cv ' . $name . \random_int(0, 1000000).'.'.$file->extension();
+            $filename = $folder." " . $name . \random_int(0, 1000000).'.'.$file->extension();
             $path = $file->storeAs(
                 'cv',
                 $filename,
