@@ -1,8 +1,6 @@
 @extends('layouts/default')
 
-@section('script')
-    <script src="{{ asset('dist/js/addjob.js') }}"></script>
-@endsection
+
 @section('content')
     <section class="section-hero overlay inner-page bg-image"
         style="background-image: url({{ asset('dist/images/hero_1.jpg') }});" id="home-section">
@@ -41,9 +39,9 @@
                     </div>
                 </div>
             </div>
-            <form class="p-4 p-md-5 border rounded" action="{{ route('createJob') }}" method="post">
+            <form class="p-4 p-md-5 border rounded" action="{{ route('createJob') }}" method="post" enctype="multipart/form-data">
                 @csrf
-                <div class="row mb-5" >
+                <div class="row mb-5">
                     <div class="col-lg-12">
                         <h3 class="text-black mb-5 border-bottom pb-2">Job Details</h3>
                         <div class="form-group">
@@ -54,7 +52,8 @@
                         </div>
                         <div class="form-group">
                             <label for="job-title">Job Title*</label>
-                            <input type="text" name="title" class="form-control" id="job-title" placeholder="Product Designer">
+                            <input type="text" name="title" class="form-control" id="job-title"
+                                placeholder="Product Designer">
                         </div>
                         <div class="form-group">
                             <label for="job-type">Job Type*</label>
@@ -65,24 +64,44 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <label for="job-type">Experience*</label>
+                            <select class="selectpicker border rounded" name="experience" id="job-type" data-style="btn-black"
+                                data-width="100%" data-live-search="true" title="Experience">
+                                <option>Young Student</option>
+                                <option> 1 à 3</option>
+                                <option>3 à 5</option>
+                                <option>5 à  7</option>
+                                <option>7 à  10</option>
+                                <option>+ de 10</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="job-location">Location*</label>
-                            <input type="text" class="form-control" name="location" id="job-location" placeholder="e.g. New York">
+                            <input type="text" class="form-control" name="location" id="job-location"
+                                placeholder="e.g. New York">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="job-region">Application Deadline*</label>
+                            <input type="date" name="expired_at" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="job-region">Apply by*</label>
-                            <select class="selectpicker border rounded" name="apply_by" id="apply-job" data-style="btn-black"
-                                data-width="100%" data-live-search="true" title="Select Region">
+                            <select class="selectpicker border rounded" name="apply_by" id="apply-job"
+                                data-style="btn-black" data-width="100%" data-live-search="true" title="...">
                                 <option value="email_to_apply">Email</option>
                                 <option value="link_to_apply">to a link</option>
                             </select>
                         </div>
+                        
                         <div class="form-group text-center" id="to_apply"></div>
                         <div class="form-group">
                             <label for="job-description">Job Description*</label>
-                            <div class="editor"  id="editor-1">
-                                <p>Write Job Description!</p>
+                            <div>
+                                <textarea name="description" id="content" cols="30" rows="10"></textarea>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
                 <div class="row align-items-center mb-5">
@@ -102,4 +121,15 @@
 
         </div>
     </section>
+@endsection
+
+@section('script')
+
+    <script src="{{ asset('dist/js/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('dist/js/addjob.js') }}"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea#content'
+        });
+    </script>
 @endsection

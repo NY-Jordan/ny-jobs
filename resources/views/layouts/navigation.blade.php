@@ -9,9 +9,18 @@
             <li><a href="{{ route('jobs') }}">Jobs</a></li>
             <li><a href="{{ route('offers') }}">Offers</a></li>
             <li><a href="{{ route('offers') }}">Services</a></li>
-            <li class="">
-              <a href="{{ route('account') }}">Account</a>
+            @if (auth()->check())
+            <li class="has-children">
+              <a href="#">Account</a>
+              <ul class="dropdown">
+                <li><a href="{{ route('account') }}">Dashboard</a></li>
+                @if (auth()->user()->curriculumSubscription)
+                  <li><a href="{{ route('cvTheque') }}">CV Theque</a></li>
+                @endif
+                <li><a href="{{ route('settings') }}">Settings</a></li>
+              </ul>
             </li>
+            @endif
             <li><a href="{{ route('contact') }}">Contact</a></li>
             <li class="d-lg-none"><a href="{{ route('addJob') }}"><span class="mr-2">+</span> Post a Job</a></li>
             <li class="d-lg-none"><a href="#" data-toggle="modal" data-target="#login_modal">Log In</a></li>

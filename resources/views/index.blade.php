@@ -13,49 +13,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est, consequuntur
                             perferendis.</p>
                     </div>
-                    <form method="post" class="search-jobs-form">
-                        <div class="row mb-5">
-                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                <input type="text" class="form-control form-control-lg"
-                                    placeholder="Job title, Company...">
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%"
-                                    data-live-search="true" title="Select Region">
-                                    <option>Anywhere</option>
-                                    <option>San Francisco</option>
-                                    <option>Palo Alto</option>
-                                    <option>New York</option>
-                                    <option>Manhattan</option>
-                                    <option>Ontario</option>
-                                    <option>Toronto</option>
-                                    <option>Kansas</option>
-                                    <option>Mountain View</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%"
-                                    data-live-search="true" title="Select Job Type">
-                                    <option>Part Time</option>
-                                    <option>Full Time</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                <button type="submit" class="btn btn-primary btn-lg btn-block text-white btn-search"><span
-                                        class="icon-search icon mr-2"></span>Search Job</button>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 popular-keywords">
-                                <h3>Trending Keywords:</h3>
-                                <ul class="keywords list-unstyled m-0 p-0">
-                                    <li><a href="#" class="">UI Designer</a></li>
-                                    <li><a href="#" class="">Python</a></li>
-                                    <li><a href="#" class="">Developer</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </form>
+                    @include('components/search1')
                 </div>
             </div>
         </div>
@@ -126,9 +84,9 @@
 
                     @foreach ($jobs as $job)
                         <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                            <a href="job-single.html"></a>
+                            <a href="{{ route('jobDetails', $job->id) }}"></a>
                             <div class="job-listing-logo">
-                                <img src="{{ asset('dist/images/job_logo_1.jpg') }}"
+                                <img src="{{ asset(Storage::url($job->company->logo)) }}"
                                     alt="Free Website Template by Free-Template.co" class="img-fluid">
                             </div>
 
@@ -138,7 +96,7 @@
                                     <strong>{{ $job->company->name }}</strong>
                                 </div>
                                 <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-                                    <span class="icon-room"></span> {{ $job->location->name }}
+                                    <span class="icon-room"></span> {{ $job->location }}
                                 </div>
                                 <div class="job-listing-meta">
                                     <span class="badge badge-danger">{{ $job->type }}</span>
@@ -153,19 +111,10 @@
 
                 <div class="row pagination-wrap">
                     <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
-                        <span>Showing 1-7 Of 43,167 Jobs</span>
+                        <span></span>
                     </div>
                     <div class="col-md-6 text-center text-md-right">
-                        <div class="custom-pagination ml-auto">
-                            <a href="#" class="prev">Prev</a>
-                            <div class="d-inline-block">
-                                <a href="#" class="active">1</a>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#">4</a>
-                            </div>
-                            <a href="#" class="next">Next</a>
-                        </div>
+                        <a href="#" class="next">View more</a>
                     </div>
                 </div>
 
@@ -277,7 +226,7 @@
 
     </section>
 
-    <section class="pt-5 bg-image overlay-primary fixed overlay"
+    {{-- <section class="pt-5 bg-image overlay-primary fixed overlay"
         style="background-image: url('{{ asset('dist/images/hero_1.jpg') }}');">
         <div class="container">
             <div class="row">
@@ -298,70 +247,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection
-<div class="modal fade" id="save_cv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Save your cv</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <form action="{{ route('saveCurriculum') }}" method="post"  enctype="multipart/form-data">
-                @csrf
-                <div class="modal-body">
-
-                    <div class="form-group">
-                        <label for="name">name</label>
-                        <input type="text" class="form-control" placeholder="Your name" id="name"
-                            name="name">
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-6">
-                            <label for="profession">Profession</label>
-                            <select class="form-control" name="profession" id="profession">
-                                <option value="">Select your profession</option>
-                                <option value="Software ingeneer">Software ingeneer</option>
-                                <option value="Accounter">Accounter</option>
-                                <option value="driver">driver</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-6">
-                            <label for="profession">Exprience</label>
-                            <div class="row">
-                                <div class="col-6">
-                                    <select name="experience" class="form-control" id="">
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="plus de 10">+ de 10 </option>
-                                    </select>
-                                </div>
-                                <div class="col-6" style="padding: 08px;">Year(s)</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="cv">Your CV</label>
-                        <input class="form-control" type="file" accept=".doc, .pdf, .docx" placeholder="Your name" id="cv" name="cv">
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+@include('components/modalcv')

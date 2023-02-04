@@ -25,7 +25,7 @@ class JobService
     public static function checkPackage(int $id) 
     {
         try {
-            $package = JobPackage::where('company_id', $id)->first();
+            $package = JobPackage::where('company_id', $id)->where('etat', 1)->first();
             return $package; 
         } catch (\Throwable $th) {
             return false;
@@ -42,7 +42,7 @@ class JobService
     public static function checkSubscription(int $id)
     {
         try {
-            $subscription = JobSubscription::where('user_id', $id)->first();
+            $subscription = JobSubscription::where('user_id', $id)->where('etat', 1)->first();
             return $subscription; 
         } catch (\Throwable $th) {
             return false;

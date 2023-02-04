@@ -4,6 +4,8 @@ namespace App\Policies;
 
 use App\Models\Job;
 use App\Models\company;
+use App\Services\JobService;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class JobPolicy
@@ -41,7 +43,9 @@ class JobPolicy
      */
     public function create(company $company)
     {
-        //
+        $package = JobService::checkPackage($company->id);
+        $subscription = JobService::checkSubscription($company->id);
+        return ($package || $subscription) ;
     }
 
     /**

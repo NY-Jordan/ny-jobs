@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Offers;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -26,7 +27,13 @@ class OffersFactory extends Factory
     public function definition()
     {
         return [
-            //
+            
+            'title' => fake()->word,
+            'price' => 500,
+            'type' => "Package",
+            'number' => 5,
+            'days' => Carbon::now()->addDay(2),
+            
         ];
     }
 }

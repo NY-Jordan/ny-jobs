@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{ asset('dist/css/quill.snow.css') }}">
     
     <!-- MAIN CSS -->
+
     <link rel="stylesheet" href="{{ asset('dist/css/style.css') }}">  
     @yield('header')  
       
@@ -115,6 +116,39 @@
       </footer>
     
     </div>
+    @if (auth()->check())
+        
+    
+    <div class="modal fade" id="deleteaccount" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Delete your account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="{{ route('deleteAccount', auth()->id()) }}" method="post"  enctype="multipart/form-data">
+                @csrf
+                <div class="modal-body container">
+                    <h4 class="text-center">Are you sure tou want to delete your account ?</h4>
+                    <div class="form-group row" style="margin-left: 20% ; margin-right: 20%">
+                        <div class="col-4">
+                            <button class="btn btn-primary" type="submit">yes</button>
+                        </div>
+                        <div class="col-4"></div>
+                        <div class="col-4">
+                            <button class="btn btn-primary">No, cancel</button>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
+@endif
   
       <!-- SCRIPTS -->
       

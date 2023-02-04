@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Curriculum;
+/* use Barryvdh\DomPDF\PDF;
+ */use App\Models\Curriculum;
+ use Barryvdh\DomPDF\Facade\Pdf as PDF;
 use App\Services\AppService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CurriculumController extends Controller
 {
+
+    
 
     /**
      * saveCv function
@@ -39,5 +44,13 @@ class CurriculumController extends Controller
             dd($th->getMessage());
             return back()->with('message', 'error, refresh and try again');
         }
+    }
+
+
+    public function load($id)
+    {
+        $cv = Curriculum::find($id);
+        $pdf = PDF::loadFile("H:\\travaux\Onacc\ONACC\public\storage\cv\cv Nghokeng Daniel201317.pdf");
+        return $pdf->stream();
     }
 }

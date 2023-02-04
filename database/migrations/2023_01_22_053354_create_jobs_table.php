@@ -17,9 +17,12 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
+            $table->string('image');
             $table->string('type');
-            $table->string('status');
+            $table->string('status')->default(1);;
             $table->string('location');
+            $table->timestamp('expired_at');
+            $table->string('experience');
             $table->string('apply_by');
             $table->string('to_apply');
             $table->integer('view')->default(0);

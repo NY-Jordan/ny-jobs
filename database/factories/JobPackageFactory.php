@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Company;
+use App\Models\Offers;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,11 @@ class JobPackageFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "falt_rate" => fake()->word,
+            "price" => 500,
+            'number' => 5,
+            'company_id' => Company::first()->id,
+            'offer_id' => Offers::first()->id,
         ];
     }
 }

@@ -9,9 +9,10 @@ $(document).on("change", "#apply-job", function (e) {
         $('#to_apply').html('<label for="job-location">What\'s email</label><input name="to_apply" type="text" class="form-control" id="job-location" placeholder="company@apply.com">')
     } else $('#to_apply').html('<label for="job-location">What\'s link</label><input  name="to_apply" type="text" class="form-control" id="job-location" placeholder="https://">')
 
-    var myEditor = $('#editor-1');
-    var html = myEditor.children;
-    console.log(html.html());
+   
+    
+    
+    
     
 });
 

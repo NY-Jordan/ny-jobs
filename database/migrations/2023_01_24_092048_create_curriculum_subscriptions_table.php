@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('falt_rate');
             $table->integer('price');
             $table->date('expired_at');
+            $table->integer('etat')->default(1);
             $table->foreignId('company_id')->constrained()->onDelete('cascade');
             $table->foreignId('offer_id')->constrained()->onDelete('cascade');
             $table->timestamps();

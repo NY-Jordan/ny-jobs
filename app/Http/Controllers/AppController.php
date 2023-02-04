@@ -8,6 +8,7 @@ use App\Models\CurriculumSubscription;
 use App\Models\JobPackage;
 use App\Models\JobSubscription;
 use App\Models\Offers;
+use App\Models\Profession;
 use App\Services\JobService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -25,7 +26,8 @@ class AppController extends Controller
     public function index()
     {
         $jobs = Job::getRecentJobs();
-        return view('index', ['jobs' => $jobs]);
+        $profession = Profession::all();
+        return view('index', ['jobs' => $jobs, 'profession' => $profession]);
     }
 
      /**
@@ -50,6 +52,14 @@ class AppController extends Controller
     {
         $curriculum = Curriculum::all();
         return view('cvtheque', ['curriculum' => $curriculum]);
+    }
+
+
+    public function jobs()
+    {
+        $jobs = Job::where('status', 1)->paginate(10);
+        $profession = Profession::all();
+        return view("jobs", compact('jobs', 'profession'));
     }
 
 

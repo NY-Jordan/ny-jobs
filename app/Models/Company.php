@@ -18,6 +18,11 @@ class Company extends Authenticatable
         return $this->hasMany(Job::class);
     }
 
+    public function curriculumSubscription()
+    {
+        return $this->hasMany(CurriculumSubscription::class);
+    }
+
     protected $fillable = [
         'name',
         'email',
