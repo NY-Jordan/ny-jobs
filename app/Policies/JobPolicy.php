@@ -57,7 +57,7 @@ class JobPolicy
      */
     public function update(company $company, Job $Job)
     {
-        //
+        return $Job->company_id === $company->id;
     }
 
     /**
@@ -68,6 +68,20 @@ class JobPolicy
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function delete(company $company, Job $Job)
+    {
+        return  $Job->company_id === $company->id;
+    }
+
+
+    
+    /**
+     * Determine whether the user can desactive or active the model.
+     *
+     * @param company $company
+     * @param Job $Job
+     * @return \Illuminate\Auth\Access\Response|bool
+     */
+    public function desactiveOrActive(company $company, Job $Job)
     {
         return  $Job->company_id === $company->id;
     }

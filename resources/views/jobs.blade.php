@@ -6,7 +6,10 @@
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-12">
-          
+          <div class="mb-5 text-center">
+            <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Dream Job</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quas fugit ex!</p>
+          </div>
           @include('components/search1')
         </div>
       </div>
@@ -20,7 +23,7 @@
   
   <section class="site-section" id="next">
     <div class="container">
-
+      @include('components/alertSuccessMessage')
       <div class="row mb-5 justify-content-center">
         <div class="col-md-7 text-center">
           <h2 class="section-title mb-2">{{ count($jobs) }} Job Listed</h2>

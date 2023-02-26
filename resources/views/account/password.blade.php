@@ -19,6 +19,7 @@
     </section>
     <section class="site-section services-section block__62849" id="next-section">
         <div class="container">
+            @include('components/alertSuccessMessage')
             <div class="row mb-20 text-right d-flex" style="align-items: flex-end;padding-left:100%">
                 <button class="btn btn-secondary border-width-2 d-none d-lg-inline-block"> <span
                         class="mr-2 icon-add"></span>Add</button>

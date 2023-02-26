@@ -17,6 +17,7 @@
     </section>
     <section class="site-section services-section bg-light block__62849" id="next-section">
         <div class="container">
+            @include('components/alertSuccessMessage')
             <div class="row mb-5">
                 <div class="col-lg-12">
                     <form class="p-4 p-md-5 border rounded" method="POST" action="{{ route('register') }}"

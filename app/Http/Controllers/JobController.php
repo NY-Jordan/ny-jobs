@@ -25,9 +25,9 @@ class JobController extends Controller
                 if ($package || $subscription) {
                     return view('account.job.add');
                 }
-                return redirect('/offers');
+                return redirect('/offers')->with('message', "create your account before");
             }
-            return redirect('/offers');
+            return redirect('/offers')->with('message', "create your account before");
         } catch (\Throwable $th) {
             return redirect()->back()->with('error', 'error refresh and try again');
         }
@@ -110,7 +110,7 @@ class JobController extends Controller
         $job = Job::find($id);
         if (!$job)
             abort('404');
-        if ($request->user()->cannot('edit', $job)) {
+        if ($request->user()->cannot('update', $job)) {
             abort('401');
         }
         return view('account.job.edit', compact('job'));
@@ -148,10 +148,12 @@ class JobController extends Controller
     public function details($id)
     {
         $job =  Job::find($id);
+        $count =  Job::count();
+        $jobs = Job::getRecentJobs();
         if ($job) {
             $job->view += 1;
             $job->save();
-            return  view('account.job.details', compact('job'));
+            return  view('account.job.details', compact('job', 'jobs', "count"));
         } else  abort('404');
     }
 
@@ -173,5 +175,34 @@ class JobController extends Controller
         }
          $res  = $result->paginate(10);
          return view("search", ['results' => $res]);
+    }
+
+
+    /**
+     * desactiveActive fonction
+     * Desactive or active an Offers
+     * @param int $id
+     * @param string $action (action desactive or active)
+     * @param Request $request 
+     */
+    public function desactiveActive(int $id, string $action, Request $request)
+    {
+        try {
+            $job = Job::find($id);
+            if (!$job)
+                abort('404');
+            
+            if ($request->user()->cannot('desactiveOrActive', $job)) 
+                abort('401');
+
+             
+            $action === "desactive" ?  $job->status = 0 :  ($action === 'active' ??  $job->status = 1);     
+            
+            $job->save();
+             return back()->with('message', "Offre $action avec sucess");
+        } catch (\Throwable $th) {
+            dd($th);
+            return back()->with('error', 'Error, refresh and try again');
+        }
     }
 }

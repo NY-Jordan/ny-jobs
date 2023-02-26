@@ -24,6 +24,7 @@ class AppService
                 $filename,
                 'public'
             );
+           
             return $path;
         } catch (\Throwable $th) {
             dd($th->getMessage());

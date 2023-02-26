@@ -28,7 +28,7 @@
    
         <section class="site-section">
             <div class="container">
-
+                @include('components/alertSuccessMessage')
                 <div class="row mb-5 justify-content-center">
                     <div class="col-md-7 text-center">
                       <h2 class="section-title mb-2">{{ count($results) }} Job Listed</h2>

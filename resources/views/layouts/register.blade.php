@@ -3,7 +3,7 @@
 @section('content')
 <section class="site-section">
     <div class="container">
-
+      @include('components/alertSuccessMessage')
       <div class="row align-items-center mb-5">
         <div class="col-lg-8 mb-4 mb-lg-0">
           <div class="d-flex align-items-center">

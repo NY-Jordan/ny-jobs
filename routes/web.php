@@ -10,15 +10,18 @@ Route::get('/', [AppController::class, 'index'])->name('home');
 Route::get('/about', [AppController::class, 'index'])->name('about');
 Route::get('/contact', [AppController::class, 'index'])->name('contact');
 Route::get('/offers', [AppController::class, 'offers'])->name('offers');
+Route::get('/services', [AppController::class, 'services'])->name('services');
 Route::get('/jobs', [AppController::class, 'jobs'])->name('jobs'); 
 Route::get('/cvTheque', [AppController::class, 'cvTheque'])->name('cvTheque'); 
 Route::post('/add/cv', [CurriculumController::class, 'saveCv'])->name('saveCurriculum'); 
-
+Route::get('/job/search', [JobController::class, 'search'])->name('search'); 
 Route::get('/job/details/{id}', [JobController::class, 'details'])->name('jobDetails'); 
 Route::get('/cvTheque/load/{id}', [CurriculumController::class, 'load'])->name('loadcv'); 
 
+
+
 Route::middleware(['auth'])->group(function (){
-    Route::get('/account', [AccountController::class, 'index'])->name('account');
+    Route::get('/dashboard', [AccountController::class, 'index'])->name('account');
     Route::get('/settings', [AccountController::class, 'settings'])->name('settings');
     
     //profil route
@@ -38,7 +41,8 @@ Route::middleware(['auth'])->group(function (){
     Route::post('/job/delete/{id}', [JobController::class, 'delete'])->name('deleteJob'); 
     Route::get('/job/edit/{id}', [JobController::class, 'edit'])->name('editJob'); 
     Route::post('/job/update/{id}', [JobController::class, 'update'])->name('updateJob'); 
-    Route::get('/job/search', [JobController::class, 'search'])->name('search'); 
+    Route::post('/job/desactive/{id}', [JobController::class, 'desactiveActive'])->name('desactiveJob'); 
+    Route::post('/job/active/{id}/{action}', [JobController::class, 'desactiveActive'])->name('activeJob'); 
 
 });
 

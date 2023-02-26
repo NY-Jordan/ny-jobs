@@ -7,10 +7,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h1 class="text-white font-weight-bold">New Job</h1>
+                    <h1 class="text-white font-weight-bold">Update Job</h1>
                     <div class="custom-breadcrumbs">
                         <a href="{{ route('account') }}">Account</a> <span class="mx-2 slash">/</span>
-                        <span class="text-white"><strong>Add new job</strong></span>
+                        <span class="text-white"><strong>Update {{ $job->title }}</strong></span>
                     </div>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                 <div class="col-lg-8 mb-4 mb-lg-0">
                     <div class="d-flex align-items-center">
                         <div>
-                            <h2>Post A Job</h2>
+                            <h2>Update A Job</h2>
                         </div>
                     </div>
                 </div>
@@ -52,22 +52,22 @@
                         </div>
                         <div class="form-group">
                             <label for="job-title">Job Title*</label>
-                            <input type="text" name="title" class="form-control" id="job-title"
+                            <input type="text" value="{{ $job->title }}" name="title" class="form-control" id="job-title"
                                 placeholder="Product Designer">
                         </div>
                         <div class="form-group">
                             <label for="job-type">Job Type*</label>
-                            <select class="selectpicker border rounded" name="type" id="job-type" data-style="btn-black"
+                            <select class="selectpicker border rounded"  name="type" id="job-type" data-style="btn-black"
                                 data-width="100%" data-live-search="true" title="Select Job Type">
-                                <option>Part Time</option>
-                                <option>Full Time</option>
+                                <option >Part Time</option>
+                                <option >Full Time</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="job-type">Experience*</label>
-                            <select class="selectpicker border rounded" name="experience" id="job-type" data-style="btn-black"
-                                data-width="100%" data-live-search="true" title="Experience">
-                                <option>Young Student</option>
+                            <label for="job-experience">Experience*</label>
+                            <select class="selectpicker border rounded" name="experience" id="job-experience" data-style="btn-black"
+                                data-width="100%" data-live-search="false" title="Experience">
+                                <option class="selected active">Young Student</option>
                                 <option> 1 à 3</option>
                                 <option>3 à 5</option>
                                 <option>5 à  7</option>
@@ -77,19 +77,19 @@
                         </div>
                         <div class="form-group">
                             <label for="job-location">Location*</label>
-                            <input type="text" class="form-control" name="location" id="job-location"
+                            <input type="text" value="{{ $job->location }}" class="form-control" name="location" id="job-location"
                                 placeholder="e.g. New York">
                         </div>
                         
                         <div class="form-group">
                             <label for="job-region">Application Deadline*</label>
-                            <input type="date" name="expired_at" class="form-control">
+                            <input type="date" value="{{ $job->expired_at }}" name="expired_at" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="job-region">Apply by*</label>
                             <select class="selectpicker border rounded" name="apply_by" id="apply-job"
                                 data-style="btn-black" data-width="100%" data-live-search="true" title="...">
-                                <option value="email_to_apply">Email</option>
+                                <option value="email_to_apply" selected>Email</option>
                                 <option value="link_to_apply">to a link</option>
                             </select>
                         </div>
@@ -131,5 +131,9 @@
         tinymce.init({
             selector: 'textarea#content'
         });
+    </script>
+    <script>
+        console.log($('#job-type').selectpicker('val', "Part Time"))
+        $('#job-type').selectpicker('val', "Part Time")
     </script>
 @endsection

@@ -1526,6 +1526,10 @@ CSS INDEX
     background-image: -o-linear-gradient(top, #E7940C, #FDB001);
     background-image: linear-gradient(to bottom, #E7940C, #FDB001);
   }
+  .btn-arround{
+		background-color: white;
+		color: black;
+	  }
   .cp-default-btn-primary {
     border: 1px solid #16a085;
     -webkit-border-radius: 4px;

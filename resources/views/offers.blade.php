@@ -1,7 +1,7 @@
 @extends('layouts/default')
 
 @section('content')
-    <section class="section-hero overlay inner-page bg-image" style="background-image: url('images/hero_1.jpg');"
+    <section class="section-hero overlay inner-page bg-image" style="background-image: url({{ asset('dist/images/hero_1.jpg') }});"
         id="home-section">
         <div class="container">
             <div class="row">
@@ -16,8 +16,10 @@
         </div>
     </section>
 
+
     <section class="site-section" id="accordion">
         <div class="container">
+            @include('components/alertSuccessMessage')
             <div class="row mb-5">
                 <div class="col-12 text-center" data-aos="fade">
                     <h2 class="section-title mb-3">Posts your job offer easyly and frequently</h2>

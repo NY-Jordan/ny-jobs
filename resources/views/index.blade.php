@@ -14,6 +14,7 @@
                             perferendis.</p>
                     </div>
                     @include('components/search1')
+                    @include('components/alertSuccessMessage')
                 </div>
             </div>
         </div>

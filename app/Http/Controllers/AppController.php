@@ -48,10 +48,20 @@ class AppController extends Controller
      * 
      * @return \Illuminate\View\View
      */
-    public function cvTheque()
+    public function cvTheque(Request $request)
     {
-        $curriculum = Curriculum::all();
-        return view('cvtheque', ['curriculum' => $curriculum]);
+        $name = $request->name ?? null;
+        $profession = $request->profession ?? null;
+        $experience = $request->experience ?? null;
+        
+        $results = (new Curriculum)->search($name, (int)$profession, $experience);
+        $profession = Profession::all();
+        return view('cvtheque', ['curriculum' => $results, 'profession' => $profession]);
+    }
+
+    public function services()
+    {
+        return view('services');
     }
 
 

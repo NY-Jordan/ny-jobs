@@ -8,7 +8,7 @@
             <li><a href="{{ route('home') }}" class="nav-link active">Home</a></li>
             <li><a href="{{ route('jobs') }}">Jobs</a></li>
             <li><a href="{{ route('offers') }}">Offers</a></li>
-            <li><a href="{{ route('offers') }}">Services</a></li>
+            <li><a href="{{ route('services') }}">Services</a></li>
             @if (auth()->check())
             <li class="has-children">
               <a href="#">Account</a>

@@ -13,6 +13,7 @@ use App\Services\CampayService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\CurriculumSubscription;
+use App\Services\CompanyService;
 use Illuminate\Contracts\View\View;
 
 class AccountController extends Controller
@@ -33,7 +34,8 @@ class AccountController extends Controller
     public function index()
     {
         $jobs = Job::where('company_id', Auth::user()->id)->get();
-        return view('account.index2', compact("jobs"));
+        $views = CompanyService::AllView(Auth::id());
+        return view('account.index2', compact("jobs", "views"));
     }
 
     public function password()
@@ -177,5 +179,8 @@ class AccountController extends Controller
         }
         
     }
+
+
+    
 
 }

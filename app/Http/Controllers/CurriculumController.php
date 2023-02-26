@@ -3,16 +3,19 @@
 namespace App\Http\Controllers;
 
 /* use Barryvdh\DomPDF\PDF;
- */use App\Models\Curriculum;
- use Barryvdh\DomPDF\Facade\Pdf as PDF;
+ */
+
+use App\Models\Curriculum;
+use Spatie\PdfToImage\Pdf as SpatiePdf;
 use App\Services\AppService;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf as PDF;
 use Illuminate\Support\Facades\Storage;
 
 class CurriculumController extends Controller
 {
 
-    
+
 
     /**
      * saveCv function
@@ -30,15 +33,21 @@ class CurriculumController extends Controller
         ]);
         try {
             $path = AppService::saveFile($request->name, $request->file("cv"), "cv");
+            $full_path = public_path("storage/".$path);
+            
+            $pdf = new SpatiePdf($full_path);
+            dd($pdf->getNumberOfPages());
+            //$pdf->saveImage(public_path()."/storage/cv");
+
             if ($path) {
                 Curriculum::create([
                     'name' => $request->name,
                     'experience' => $request->experience,
-                    'profession_id' => 1,
+                    'profession_id' => $request->profession,
                     'path' => $path
                 ]);
-            } else 
-                return back()->with('message', 'error, refresh and try again');           
+            } else
+                return back()->with('message', 'error, refresh and try again');
             return back()->with('message', 'you cv successfully save');
         } catch (\Throwable $th) {
             dd($th->getMessage());
@@ -47,10 +56,25 @@ class CurriculumController extends Controller
     }
 
 
+    /**
+     * load function
+     * load CV on view
+     *
+     * @param [type] $id
+     * @return void
+     */
     public function load($id)
     {
         $cv = Curriculum::find($id);
-        $pdf = PDF::loadFile("H:\\travaux\Onacc\ONACC\public\storage\cv\cv Nghokeng Daniel201317.pdf");
+        $pdf = PDF::loadFile(public_path(Storage::url($cv->path)));
+        PDF::setOptions([
+            "defaultFont" => "Courier",
+            "defaultPaperSize" => "a4",
+            "dpi" => 130
+        ]);
         return $pdf->stream();
     }
+
+
+    
 }
