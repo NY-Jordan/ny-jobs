@@ -64,7 +64,8 @@
                     <a href="#" class="btn btn-block btn-light btn-md"><span class="icon-heart-o mr-2 text-danger"></span>Save Job</a>
                   </div>
                   <div class="col-6">
-                    <a href="#" class="btn btn-block btn-primary btn-md">Apply Now</a>
+                    <a href="#" class="btn btn-block btn-primary btn-md" data-toggle="modal"
+                        data-target="#aplly_offer">Apply Now</a>
                   </div>
                 </div>                  
               @else
@@ -147,3 +148,4 @@
       </section>
       
 @endsection
+@include('components/applyModal')

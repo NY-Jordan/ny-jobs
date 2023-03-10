@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ApplyMail;
+use App\Models\Company;
+use App\Models\Curriculum;
 use App\Models\Job;
+use App\Models\Profession;
 use App\Services\AppService;
 use App\Services\JobService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class JobController extends Controller
 {
@@ -148,12 +153,13 @@ class JobController extends Controller
     public function details($id)
     {
         $job =  Job::find($id);
+        $profession = Profession::all();
         $count =  Job::count();
         $jobs = Job::getRecentJobs();
         if ($job) {
             $job->view += 1;
             $job->save();
-            return  view('account.job.details', compact('job', 'jobs', "count"));
+            return  view('account.job.details', compact('job', 'jobs', "count", 'profession'));
         } else  abort('404');
     }
 
@@ -203,6 +209,60 @@ class JobController extends Controller
         } catch (\Throwable $th) {
             dd($th);
             return back()->with('error', 'Error, refresh and try again');
+        }
+    }
+
+    public function applyJob($id, Request $request)
+    {
+        $request->validate([
+            'name' => "required",
+            'profession' => "required",
+            'experience' => "required",
+            'cv' => "required",
+        ]);
+
+        try {
+            //save email in file Storage
+            $path = AppService::saveFile($request->name, $request->file("cv"), "cv");
+            $full_path = public_path("storage/".$path);
+           
+
+            if ($path) {
+                //save email in Database
+                Curriculum::create([
+                    'name' => $request->name,
+                    'experience' => $request->experience,
+                    'profession_id' => $request->profession,
+                    'path' => $path
+                ]);
+
+                //send the cv to the Company
+                $job = Job::find($id);
+                $company = Company::find($job->company_id);
+                $data["email"] = $job->to_apply;
+                $data['title_job'] = $job->title;
+                $data["title"] = "Postulants de l'offre ".$job->title;
+
+                $files = [
+                    public_path('storage/'.$path),
+                ];
+                Mail::send('emails.applyMail', $data, function($message)use($data, $files) {
+                    $message->to($data["email"], $data["email"])
+                            ->from('nyjobs@google.com')
+                            ->subject($data["title"]);
+
+                    foreach ($files as $file){
+                        $message->attach($file);
+                    }
+                    
+                });
+            } else
+                return back()->with('message', 'error, refresh and try again');
+
+            
+            return back()->with('message', 'Envoyé avec success');
+        } catch (\Throwable $th) {
+            dd($th->getMessage());
         }
     }
 }

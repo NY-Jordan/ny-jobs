@@ -1,7 +1,7 @@
 @extends('layouts/default')
 
 @section('content')
-<section class="section-hero home-section overlay inner-page bg-image" style="background-image: url('{{ asset('dist/images/hero_1.jpg') }}');" id="home-section">
+<section class="section-hero home-section overlay inner-page bg-image" style="background-image: url({{ asset('dist/images/hero_1.jpg') }})" id="home-section">
 
     <div class="container">
       <div class="row align-items-center justify-content-center">
@@ -84,7 +84,7 @@
   </section>
 
     <section class="py-5 bg-image overlay-primary fixed overlay"
-        style="background-image: url('{{ asset('dist/images/hero_1.jpg') }}');">
+        style="background-image: url({{ asset('dist/images/hero_1.jpg') }});">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-8">

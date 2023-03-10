@@ -14,6 +14,7 @@ Route::get('/services', [AppController::class, 'services'])->name('services');
 Route::get('/jobs', [AppController::class, 'jobs'])->name('jobs'); 
 Route::get('/cvTheque', [AppController::class, 'cvTheque'])->name('cvTheque'); 
 Route::post('/add/cv', [CurriculumController::class, 'saveCv'])->name('saveCurriculum'); 
+Route::post('/job/{id}/apply', [JobController::class, 'applyJob'])->name('applyJob'); 
 Route::get('/job/search', [JobController::class, 'search'])->name('search'); 
 Route::get('/job/details/{id}', [JobController::class, 'details'])->name('jobDetails'); 
 Route::get('/cvTheque/load/{id}', [CurriculumController::class, 'load'])->name('loadcv'); 

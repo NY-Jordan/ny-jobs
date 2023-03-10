@@ -54,10 +54,11 @@
 
             <div class="row">
                 @if (!empty($curriculum))
-                    @foreach ($curriculum as $cv)
+                    @foreach ($curriculum as $key => $cv)
                         <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-5">
 
-                            <a href="{{ route('loadcv', $cv->id) }}" class="block__16443 text-center d-block" style="padding: 10px;">
+                            <a href="#" class="block__16443 text-center d-block" style="padding: 10px;"
+                            data-toggle="modal" data-target="#loadcv{{ $key }}">
                                 <div>
                                     <img src="{{ asset('assets/images/avatar.png') }}" alt="" srcset=""
                                         style="width: 100px;height: 100px; border-radius: 60px;">
@@ -78,6 +79,7 @@
                                 </div>
 
                             </a>
+                           
 
                         </div>
                     @endforeach
@@ -89,3 +91,6 @@
         </div>
     </section>
 @endsection
+@foreach ($curriculum as $key => $cv)
+  @include('components/imageLoad')
+@endforeach

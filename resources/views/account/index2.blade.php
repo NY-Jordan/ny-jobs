@@ -110,4 +110,4 @@
         </div>
     </section>
 @endsection
-@include('components/desactiveActiveJob') 
+{{-- @include('components/desactiveActiveJob')  --}}

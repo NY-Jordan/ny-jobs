@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\company;
+use App\Models\Company;
 
 return [
 
@@ -64,7 +64,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => company::class,
+            'model' => Company::class,
         ],
 
         // 'users' => [

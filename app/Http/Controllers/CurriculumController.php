@@ -34,23 +34,24 @@ class CurriculumController extends Controller
         try {
             $path = AppService::saveFile($request->name, $request->file("cv"), "cv");
             $full_path = public_path("storage/".$path);
-            
             $pdf = new SpatiePdf($full_path);
-            dd($pdf->getNumberOfPages());
-            //$pdf->saveImage(public_path()."/storage/cv");
+            $pdf->getNumberOfPages();
+            $path_image = "/cv/images/$request->name.png";
+            $pdf->saveImage(public_path().'/storage'.$path_image);
 
             if ($path) {
                 Curriculum::create([
                     'name' => $request->name,
                     'experience' => $request->experience,
                     'profession_id' => $request->profession,
-                    'path' => $path
+                    'path' => $path,
+                    'image_path' => $path_image
                 ]);
             } else
                 return back()->with('message', 'error, refresh and try again');
             return back()->with('message', 'you cv successfully save');
         } catch (\Throwable $th) {
-            dd($th->getMessage());
+            dd($th);
             return back()->with('message', 'error, refresh and try again');
         }
     }

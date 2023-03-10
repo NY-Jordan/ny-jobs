@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('experience');
             $table->string('path');
+            $table->string('image_path');
             $table->foreignId('profession_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

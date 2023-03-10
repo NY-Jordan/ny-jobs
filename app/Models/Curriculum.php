@@ -19,6 +19,7 @@ class Curriculum extends Model
         'experience',
         'path',
         'profession_id',
+        'image_path',
     ];
 
     public function profession()
